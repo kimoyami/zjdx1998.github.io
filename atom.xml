@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zjdx1998.github.io/"/>
-  <updated>2018-05-05T19:47:15.723Z</updated>
+  <updated>2018-05-05T19:48:43.455Z</updated>
   <id>http://zjdx1998.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://zjdx1998.github.io/2018/05/06/hello-world/"/>
     <id>http://zjdx1998.github.io/2018/05/06/hello-world/</id>
     <published>2018-05-05T18:07:35.418Z</published>
-    <updated>2018-05-05T19:47:15.723Z</updated>
+    <updated>2018-05-05T19:48:43.455Z</updated>
     
-    <content type="html"><![CDATA[<p>现在是北京时间2018年5月6日3.45分，时隔7年时间我终于用上自己的博客了…</p><p>不过这次是亲手一步步搭的，以后会不定期更新…</p><p>谢谢大家的支持！</p><p>#本博客的用处<br>    技术博客</p><pre><code>生活随笔</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>现在是北京时间2018年5月6日3.45分，时隔7年时间我终于用上自己的博客了…</p><p>不过这次是亲手一步步搭的，以后会不定期更新…</p><p>谢谢大家的支持！</p><p>#本博客的用处</p><pre><code>技术博客生活随笔</code></pre>]]></content>
     
     <summary type="html">
     
@@ -32,9 +32,11 @@
         &lt;p&gt;现在是北京时间2018年5月6日3.45分，时隔7年时间我终于用上自己的博客了…&lt;/p&gt;
 &lt;p&gt;不过这次是亲手一步步搭的，以后会不定期更新…&lt;/p&gt;
 &lt;p&gt;谢谢大家的支持！&lt;/p&gt;
-&lt;p&gt;#本博客的用处&lt;br&gt;    技术博客&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;生活随笔
-&lt;/c
+&lt;p&gt;#本博客的用处&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;技术博客
+
+生活随笔
+&lt;/code&gt;&lt;/
       
     
     </summary>
