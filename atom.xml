@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zjdx1998.ml/"/>
-  <updated>2018-05-22T11:06:17.084Z</updated>
+  <updated>2018-05-22T15:28:20.966Z</updated>
   <id>http://www.zjdx1998.ml/</id>
   
   <author>
@@ -17,31 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ACM训练记录</title>
+    <title>5-6月ACM训练记录</title>
     <link href="http://www.zjdx1998.ml/2018/05/17/ACM-Training/"/>
     <id>http://www.zjdx1998.ml/2018/05/17/ACM-Training/</id>
     <published>2018-05-17T03:23:06.000Z</published>
-    <updated>2018-05-22T11:06:17.084Z</updated>
+    <updated>2018-05-22T15:28:20.966Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="5-6月"><a href="#5-6月" class="headerlink" title="5-6月"></a>5-6月</h1><table><thead><tr><th>序号</th><th>题目名</th><th>所属比赛</th><th>算法</th><th>做出/补题</th><th>做题时间</th></tr></thead><tbody><tr><td><center> 1 </center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44A.cpp" title="A.Chess Placing">A.Chess Placing</a></center></td><td><center>ECF Round 44</center></td><td><center>模拟</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>2</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44B.cpp" title="B.Switches and Lamps">B.Switches and Lamps</a>   </center></td><td><center> ECF Round 44</center></td><td><center>模拟</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>3</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44C.cpp" title="C.Liebig's Barrels">C.Liebig's Barrels</a>   </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>4</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>5</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>6</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>7</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr></tbody></table><h1 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h1>]]></content>
+    <content type="html"><![CDATA[<p>题解在题目名链接的代码中查看</p><h1 id="Codeforces"><a href="#Codeforces" class="headerlink" title="Codeforces"></a>Codeforces</h1><table><thead><tr><th>序号</th><th>题目名</th><th>所属比赛</th><th>算法</th><th>做出/补题</th><th>做题时间</th></tr></thead><tbody><tr><td><center> 1 </center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44A.cpp" title="A.Chess Placing">A.Chess Placing</a></center></td><td><center>ECF Round 44</center></td><td><center>模拟</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>2</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44B.cpp" title="B.Switches and Lamps">B.Switches and Lamps</a>   </center></td><td><center> ECF Round 44</center></td><td><center>模拟</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>3</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44C.cpp" title="C.Liebig's Barrels">C.Liebig's Barrels</a>   </center></td><td><center> ECF Round 44</center></td><td><center>贪心</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>4</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44D.cpp" title="D.Sand Fortress">D.Sand Fortress</a>   </center></td><td><center> ECF Round 44</center></td><td><center>二分</center></td><td><center> × √</center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>5</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>6</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>7</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr></tbody></table><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;5-6月&quot;&gt;&lt;a href=&quot;#5-6月&quot; class=&quot;headerlink&quot; title=&quot;5-6月&quot;&gt;&lt;/a&gt;5-6月&lt;/h1&gt;&lt;table&gt;
+        &lt;p&gt;题解在题目名链接的代码中查看&lt;/p&gt;
+&lt;h1 id=&quot;Codeforces&quot;&gt;&lt;a href=&quot;#Codeforces&quot; class=&quot;headerlink&quot; title=&quot;Codeforces&quot;&gt;&lt;/a&gt;Codeforces&lt;/h1&gt;&lt;table&gt;
 &lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;序号&lt;/th&gt;
-&lt;th&gt;题目名&lt;/th&gt;
-&lt;th&gt;所属比赛&lt;/th&gt;
-&lt;th&gt;算
+&lt;tr
       
     
     </summary>
     
+      <category term="ACM" scheme="http://www.zjdx1998.ml/categories/ACM/"/>
+    
     
       <category term="ACM" scheme="http://www.zjdx1998.ml/tags/ACM/"/>
+    
+      <category term="模拟" scheme="http://www.zjdx1998.ml/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+      <category term="贪心" scheme="http://www.zjdx1998.ml/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+      <category term="二分" scheme="http://www.zjdx1998.ml/tags/%E4%BA%8C%E5%88%86/"/>
     
   </entry>
   

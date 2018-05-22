@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+﻿#include<bits/stdc++.h>
 using namespace std;
 #define rep(i,n) for(int i=1;i<=n;i++)
 long long ans;
@@ -13,19 +13,19 @@ int main(){
         return 0;
     }
     ans=0;
-    for(int i=1;n>0&&i<=id;i+=k){
+    for(int i=1;n&&i<=id;i+=k){
         n--;
         ans+=a[i];
         a[i]=-1;
     }
-    if(n>0){
-        for(int i=id;n>0;i--){
+    if(n)
+        for(int i=id;n;i--){
             if(a[i]!=-1){
                 ans+=a[i];
                 n--;
             }
         }
-    }
     cout<<ans<<endl;
     return 0;
 }
+//小结：本题WA了3发，前两次是看错题，题意是求最大值。 只需扫一遍所有符合条件的a[i]<a[1]+l，然后按照贪心的策略求出可行的a[i]作为每一个木桶的最小边; 
