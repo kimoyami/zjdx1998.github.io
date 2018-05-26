@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="浙江大傻屌&#39;s Blog">
 <meta property="og:description" content="题解在题目名链接的代码中查看 Codeforces   序号 题目名 所属比赛 算法 做出/补题 做题时间      1   A.Chess Placing ECF Round 44 模拟  √  2018/5/21    2  B.Switches and Lamps     ECF Round 44 模拟  √  2018/5/21    3  C.Liebig&apos;s Barrels     E">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-24T14:59:13.339Z">
+<meta property="og:updated_time" content="2018-05-26T05:49:20.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5-6月ACM训练记录">
 <meta name="twitter:description" content="题解在题目名链接的代码中查看 Codeforces   序号 题目名 所属比赛 算法 做出/补题 做题时间      1   A.Chess Placing ECF Round 44 模拟  √  2018/5/21    2  B.Switches and Lamps     ECF Round 44 模拟  √  2018/5/21    3  C.Liebig&apos;s Barrels     E">
@@ -167,7 +167,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Codeforces"><span class="post-toc-number">1.</span> <span class="post-toc-text">Codeforces</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#其他"><span class="post-toc-number">2.</span> <span class="post-toc-text">其他</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Codeforces"><span class="post-toc-number">1.</span> <span class="post-toc-text">Codeforces</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#其他"><span class="post-toc-number">2.</span> <span class="post-toc-text">其他</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HDU"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">HDU</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -264,7 +264,32 @@
 </tr>
 </tbody>
 </table>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>字符串Hash题目<a href="https://blog.csdn.net/chaiwenjun000/article/details/71079819" target="_blank" rel="noopener">汇总</a></p>
+<h2 id="HDU"><a href="#HDU" class="headerlink" title="HDU"></a>HDU</h2><p>关于BKDRHash的介绍较为详细的文章可以点击<a href="https://blog.csdn.net/wanglx_/article/details/40400693" target="_blank" rel="noopener">文章1</a> 以及<a href="https://www.cnblogs.com/ldy-miss/p/6099454.html" target="_blank" rel="noopener">文章2</a></p>
+<p>一个小tip是, bkdrhash最好<strong><em>return (h &amp; 0x7FFFFFFF)</em></strong>，如果模散列表，当长度小的时候容易造成冲突，可以采用开放地址或者拉链法解决。但是如果直接自然溢出，冲突数较小，这种方法似乎和map更搭。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>题目名</th>
+<th>所属比赛</th>
+<th>算法</th>
+<th>做出/补题</th>
+<th>做题时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><center> <a href="/2018/05/17/ACM-Training/hdu1880.cpp" title="1880.魔咒词典">1880.魔咒词典</a></center></td>
+<td><center>类题训练</center></td>
+<td><center>字符串BKDRHash</center></td>
+<td><center> √ </center></td>
+<td><center>2018/5/25 </center></td>
+</tr>
+</tbody>
+</table>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -272,7 +297,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-05-24T14:59:13.339Z" itemprop="dateUpdated">2018-05-24 22:59:13</time>
+    最后更新时间：<time datetime="2018-05-26T05:49:20.573Z" itemprop="dateUpdated">2018-05-26 13:49:20</time>
 </span><br>
 
 
