@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>大一下学期面向对象程序设计（1）期末复习 | 浙江大傻屌&#39;s Blog | 谁说我们一定要走别人的路。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="期末复习,C++">
+    <meta name="description" content="期末复习总览占比分布期末 70% 作业 20% 考勤 10% 笔试阅读程序 4题各5分 填空 2题各10分 5空 上机 3*20分 考试要点构造函数、析构函数拷贝构造函数什么时候使用？ 传值，返回值 例子(共调用3+2次) :     add(cls x,cls y){         return x+y;      }     add(x,y)  常成员函数Composition函数初始化先对">
+<meta name="keywords" content="期末复习,C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大一下学期面向对象程序设计（1）期末复习">
+<meta property="og:url" content="http://www.zjdx1998.ml/2018/06/05/c-review/index.html">
+<meta property="og:site_name" content="浙江大傻屌&#39;s Blog">
+<meta property="og:description" content="期末复习总览占比分布期末 70% 作业 20% 考勤 10% 笔试阅读程序 4题各5分 填空 2题各10分 5空 上机 3*20分 考试要点构造函数、析构函数拷贝构造函数什么时候使用？ 传值，返回值 例子(共调用3+2次) :     add(cls x,cls y){         return x+y;      }     add(x,y)  常成员函数Composition函数初始化先对">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-05T16:23:09.480Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大一下学期面向对象程序设计（1）期末复习">
+<meta name="twitter:description" content="期末复习总览占比分布期末 70% 作业 20% 考勤 10% 笔试阅读程序 4题各5分 填空 2题各10分 5空 上机 3*20分 考试要点构造函数、析构函数拷贝构造函数什么时候使用？ 传值，返回值 例子(共调用3+2次) :     add(cls x,cls y){         return x+y;      }     add(x,y)  常成员函数Composition函数初始化先对">
+    
+        <link rel="alternate" type="application/atom+xml" title="浙江大傻屌&#39;s Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Jerome</h5>
+          <a href="mailto:zjd_x1998@163.com" title="zjd_x1998@163.com" class="mail">zjd_x1998@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zjdx1998" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">大一下学期面向对象程序设计（1）期末复习</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">大一下学期面向对象程序设计（1）期末复习</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-06-05T02:56:39.000Z" itemprop="datePublished" class="page-time">
+  2018-06-05
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/期末复习/">期末复习</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#期末复习总览"><span class="post-toc-number">1.</span> <span class="post-toc-text">期末复习总览</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#占比分布"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">占比分布</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#笔试"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">笔试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#考试要点"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">考试要点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造函数、析构函数"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">构造函数、析构函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拷贝构造函数"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">拷贝构造函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常成员函数"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">常成员函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Composition函数初始化"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">Composition函数初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#static"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">static</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作符重载"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">操作符重载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚函数"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">虚函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#栈展开"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">栈展开</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#分章复习"><span class="post-toc-number">2.</span> <span class="post-toc-text">分章复习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-9"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Chapter 9</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#条件编译"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">条件编译</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Sizeof"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">Sizeof</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#this指针"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">this指针</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#接口与实现分离"><span class="post-toc-number">2.1.4.</span> <span class="post-toc-text">接口与实现分离</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问函数与工具函数"><span class="post-toc-number">2.1.5.</span> <span class="post-toc-text">访问函数与工具函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造函数与析构函数"><span class="post-toc-number">2.1.6.</span> <span class="post-toc-text">构造函数与析构函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储类别"><span class="post-toc-number">2.1.7.</span> <span class="post-toc-text">存储类别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小陷阱-私有数据成员的引用"><span class="post-toc-number">2.1.8.</span> <span class="post-toc-text">小陷阱:私有数据成员的引用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#赋值运算"><span class="post-toc-number">2.1.9.</span> <span class="post-toc-text">赋值运算</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小结"><span class="post-toc-number">2.1.10.</span> <span class="post-toc-text">小结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-10"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Chapter 10</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常成员函数-1"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">常成员函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造函数初始化列表"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">构造函数初始化列表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组合"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">组合</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#友元函数与友元类"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">友元函数与友元类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#new运算符"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">new运算符</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#static-1"><span class="post-toc-number">2.2.6.</span> <span class="post-toc-text">static</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">2.2.7.</span> <span class="post-toc-text">总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-11"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Chapter 11</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算符重载"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">运算符重载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算符函数"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">运算符函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入输出流运算符重载"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">输入输出流运算符重载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一元运算符重载"><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">一元运算符重载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二元运算符重载"><span class="post-toc-number">2.3.5.</span> <span class="post-toc-text">二元运算符重载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算符重载小结"><span class="post-toc-number">2.3.6.</span> <span class="post-toc-text">运算符重载小结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类型转换"><span class="post-toc-number">2.3.7.</span> <span class="post-toc-text">类型转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结-1"><span class="post-toc-number">2.3.8.</span> <span class="post-toc-text">总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-12"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Chapter 12</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#is-a与has-a的区别"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">is-a与has-a的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#继承"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#派生类与基类的关系"><span class="post-toc-number">2.4.3.</span> <span class="post-toc-text">派生类与基类的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基类、派生类中的构造与析构函数"><span class="post-toc-number">2.4.4.</span> <span class="post-toc-text">基类、派生类中的构造与析构函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#继承小结"><span class="post-toc-number">2.4.5.</span> <span class="post-toc-text">继承小结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-13"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Chapter 13</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向对象三大要素"><span class="post-toc-number">2.5.1.</span> <span class="post-toc-text">面向对象三大要素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多态"><span class="post-toc-number">2.5.2.</span> <span class="post-toc-text">多态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#继承中的对象关系"><span class="post-toc-number">2.5.3.</span> <span class="post-toc-text">继承中的对象关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚函数-1"><span class="post-toc-number">2.5.4.</span> <span class="post-toc-text">虚函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#纯虚函数与抽象类"><span class="post-toc-number">2.5.5.</span> <span class="post-toc-text">纯虚函数与抽象类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结-2"><span class="post-toc-number">2.5.6.</span> <span class="post-toc-text">总结</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-c-review"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">大一下学期面向对象程序设计（1）期末复习</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-06-05 10:56:39" datetime="2018-06-05T02:56:39.000Z"  itemprop="datePublished">2018-06-05</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/期末复习/">期末复习</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="期末复习总览"><a href="#期末复习总览" class="headerlink" title="期末复习总览"></a>期末复习总览</h1><h2 id="占比分布"><a href="#占比分布" class="headerlink" title="占比分布"></a>占比分布</h2><pre><code>期末 70%
+作业 20%
+考勤 10%
+</code></pre><h2 id="笔试"><a href="#笔试" class="headerlink" title="笔试"></a>笔试</h2><pre><code>阅读程序 4题各5分
+填空 2题各10分 5空
+上机 3*20分
+</code></pre><h2 id="考试要点"><a href="#考试要点" class="headerlink" title="考试要点"></a>考试要点</h2><h3 id="构造函数、析构函数"><a href="#构造函数、析构函数" class="headerlink" title="构造函数、析构函数"></a>构造函数、析构函数</h3><h3 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h3><pre><code>什么时候使用？ 传值，返回值
+例子(共调用3+2次) :
+    add(cls x,cls y){
+        return x+y; 
+    }
+    add(x,y) 
+</code></pre><h3 id="常成员函数"><a href="#常成员函数" class="headerlink" title="常成员函数"></a>常成员函数</h3><h3 id="Composition函数初始化"><a href="#Composition函数初始化" class="headerlink" title="Composition函数初始化"></a>Composition函数初始化</h3><pre><code>先对成员对象初始化,构造函数初始化列表
+</code></pre><h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><h3 id="操作符重载"><a href="#操作符重载" class="headerlink" title="操作符重载"></a>操作符重载</h3><pre><code>必须重载为全局函数
+</code></pre><h3 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h3><pre><code>纯虚函数后加 = 0
+</code></pre><h3 id="栈展开"><a href="#栈展开" class="headerlink" title="栈展开"></a>栈展开</h3><pre><code>对象释放
+</code></pre><h1 id="分章复习"><a href="#分章复习" class="headerlink" title="分章复习"></a>分章复习</h1><h2 id="Chapter-9"><a href="#Chapter-9" class="headerlink" title="Chapter 9"></a>Chapter 9</h2><h3 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h3><pre><code>`#ifndef FILENAME_H`
+`#define FILENAME_H`
+
+`#endif`
+</code></pre><h3 id="Sizeof"><a href="#Sizeof" class="headerlink" title="Sizeof"></a>Sizeof</h3><pre><code>只包括数据成员的大小
+VC为了确保结构的大小为结构的字节边界数（即该结构中占用最大空间的类型所占用的字节数）的倍数，所以在为最后一个成员变量申请空间后，还会根据需要自动填充空缺的字节。
+比较以下例子
+    class test1{
+        char c;
+    } sizeof : 1
+
+    class test2{
+        char a,b,c,d,e;
+    } sizeof : 5
+
+    class test3{
+        int num; char a;
+    } sizeof : 8
+
+    class test4{
+        int num; char a,b,c,d,e;
+    } sizeof : 12
+
+    class test5{
+        char a;int num;char b;
+    } sizeof : 12
+</code></pre><h3 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h3><pre><code>每一个成员函数都有一个隐藏的指针类型形参：this
+&lt;类名&gt; *const  this
+通过对象调用成员函数时，编译程序会把对象地址作为隐含参数传递给形参this
+访问this指向对象的成员时：this-&gt;  (也可以省略不写)
+</code></pre><h3 id="接口与实现分离"><a href="#接口与实现分离" class="headerlink" title="接口与实现分离"></a>接口与实现分离</h3><pre><code>A.h A.cpp 编译-&gt; A.obj
+B.cpp 编译 B.obj   
+A.obj B.obj 链接 -&gt; B.exe
+软件供应商在他们的产品中只需提供头文件和类库(目标模块)，而不需提供源代码。
+</code></pre><h3 id="访问函数与工具函数"><a href="#访问函数与工具函数" class="headerlink" title="访问函数与工具函数"></a>访问函数与工具函数</h3><ol>
+<li>访问(access)函数,public,用来读取或显示数据,如<code>setName,getName。如vector.empty()</code></li>
+<li>工具(utility)函数,private,一般在public函数里面被使用。</li>
+</ol>
+<h3 id="构造函数与析构函数"><a href="#构造函数与析构函数" class="headerlink" title="构造函数与析构函数"></a>构造函数与析构函数</h3><ul>
+<li><p>缺省构造函数：</p>
+<ul>
+<li>不带参数的构造函数</li>
+<li><p><strong>所有参数都有默认值的构造函数</strong><br>考虑以下例子为什么编译失败(缺省构造函数重载失败)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class A&#123;  </span><br><span class="line">    int x, y;</span><br><span class="line">public:</span><br><span class="line">    A(int x = 0,y = 0)          </span><br><span class="line">        x = x1;</span><br><span class="line">        y = y1;</span><br><span class="line">    &#125; </span><br><span class="line">    A(int x1)&#123;</span><br><span class="line">        x = x1;</span><br><span class="line">        y = 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>只要类中提供了构造函数，即使没有提供缺省构造函数，编译程序将不再提供缺省构造函数。</p>
+</li>
+</ul>
+</li>
+<li>析构函数<ul>
+<li>析构函数是一个特殊的成员函数，它的名字同类名，并在前面加“～”字符，用来与构造函数加以区别。析构函数不接收任何参数，也不可以指定返回类型。</li>
+<li>一个类中只能定义一个析构函数，析构函数不能重载，且必须是公有的。</li>
+<li>下面两种情况，析构函数将会被自动调用<ul>
+<li>如果一个对象被定义在一个函数体内，则当这个函数结束时，该对象的析构函数被自动调用；</li>
+<li>当一个对象是使用new运算符被动态创建的，在使用delete运算符释放它时，delete将会自动调用析构函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="存储类别"><a href="#存储类别" class="headerlink" title="存储类别"></a>存储类别</h3><p><a href="https://blog.csdn.net/fx677588/article/details/52687707" target="_blank" rel="noopener">具体可以参考</a></p>
+<ul>
+<li>全局对象：在任何函数(含main)执行前，构造；在程序结束时，析构.</li>
+<li>局部对象：(栈区)<ul>
+<li>自动变量：对象定义时，构造；块结束时，析构.</li>
+<li>静态变量：首次定义时，构造？；程序结束时，析构.</li>
+</ul>
+</li>
+<li>对象间调用构造函数和析构函数的顺序恰好相反. 全局和静态对象(均为静态存储类别)同理.<ul>
+<li>特例1：调用exit函数退出程序执行时，不调用剩余<em>自动对象</em>的析构函数.   </li>
+<li>特例2：调用abort函数退出程序执行时，不调用任何剩余对象的析构函数.</li>
+</ul>
+</li>
+</ul>
+<h3 id="小陷阱-私有数据成员的引用"><a href="#小陷阱-私有数据成员的引用" class="headerlink" title="小陷阱:私有数据成员的引用"></a>小陷阱:私有数据成员的引用</h3><p>考虑以下程序，是否出现类私有数据成员的引用情况？<br>如何解决该问题？（加const，如何加？）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">public:</span><br><span class="line">    int &amp; setA() &#123;</span><br><span class="line">        a = 1;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int a;</span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">    A t;</span><br><span class="line">    int&amp; r = t.setA();</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>第三行变为 <code>const int &amp; setA()</code>即可。</p>
+<h3 id="赋值运算"><a href="#赋值运算" class="headerlink" title="赋值运算"></a>赋值运算</h3><ul>
+<li>By default, such assignment is performed by memberwise assignment(按成员赋值/逐个成员赋值). </li>
+<li>拷贝构造函数在对还没存在的对象赋值时会调用；赋值函数在对已经存在的对象赋值会调用；赋值函数初始化前需要清理堆资源等，拷贝构造不需要。</li>
+<li>注意点<ul>
+<li>有一种特别常见的情况需要自己定义复制控制函数：类具有指针函数。</li>
+<li>赋值操作符和复制构造函数可以看成一个单元，当需要其中一个时，我们几乎也肯定需要另一个</li>
+<li>三法则：如果类需要析构函数，则它也需要赋值操作符和复制构造函数</li>
+<li>如果没定义复制构造函数（别的不管），编译器会自动生成默认复制构造函数</li>
+<li>如果定义了其他构造函数（包括复制构造函数），编译器绝不会生成默认构造函数</li>
+<li>即使自己写了析构函数，编译器也会自动生成默认析构函数</li>
+</ul>
+</li>
+<li>解决方案<br>  自定义拷贝构造函数：按引用传递</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>条件编译指令</li>
+<li>访问成员函数的三种方式(句柄+操作符)</li>
+<li>成员函数的作用域：class scope</li>
+<li>访问函数和工具函数</li>
+<li>带默认实参的构造函数</li>
+<li>构造函数和析构函数被调用的顺序</li>
+<li>破坏类的封装的一种做法：返回对私有数据成员的引用</li>
+<li>利用一个对象初始化另一个对象(拷贝构造函数)</li>
+</ul>
+<h2 id="Chapter-10"><a href="#Chapter-10" class="headerlink" title="Chapter 10"></a>Chapter 10</h2><h3 id="常成员函数-1"><a href="#常成员函数-1" class="headerlink" title="常成员函数"></a>常成员函数</h3><ul>
+<li>要求<ul>
+<li>不能修改本对象的数据成员</li>
+<li>不能调用本对象其它non-const成员函数</li>
+</ul>
+</li>
+<li>建议<ul>
+<li>所有不更改object成员的函数均声明为const成员函数</li>
+</ul>
+</li>
+<li>注意<ul>
+<li>成员函数是否为常成员函数，不仅取决于它不修改对象、不调用non-const成员函数，而且必须显式地声明为const！</li>
+<li>构造函数、析构函数不能声明为const</li>
+<li>可以调用非const成员函数初始化const对象（为什么？）<br>  对象的常量特性体现在初始化(构造)后、析构之前。</li>
+</ul>
+</li>
+<li>小结<ul>
+<li>可以定义const常量，具有不可变性；</li>
+<li>便于进行类型检查，使编译器对处理内容有更多了解，消除了一些隐患；</li>
+<li>可以避免意义模糊的数字出现，同样可以很方便地进行参数的调整和修改；</li>
+<li>可以保护被修饰的东西，防止意外的修改，增强程序的健壮性；</li>
+<li>提高了效率（编译器对常量进行优化）</li>
+</ul>
+</li>
+</ul>
+<h3 id="构造函数初始化列表"><a href="#构造函数初始化列表" class="headerlink" title="构造函数初始化列表"></a>构造函数初始化列表</h3><p>构造函数初始化列表必须使用的情况 <em>注意：C++11支持const直接赋值。</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const data member (例外?const static integer)(注：普通const必须一开始初始化)</span><br><span class="line">reference data member 引用类型的数据成员</span><br><span class="line">member objects, 数据成员是其他类(未提供缺省构造函数)的对象*</span><br><span class="line">继承类的基类base class*</span><br></pre></td></tr></table></figure></p>
+<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><ul>
+<li>成员对象的构造和析构顺序<ul>
+<li>成员对象的构造先于宿主对象；</li>
+<li>成员对象按照类定义中的声明顺序构造</li>
+<li>成员对象的析构后于宿主对象。</li>
+</ul>
+</li>
+<li>总结<ul>
+<li>若无缺省构造函数，则必须使用初始化列表（思考原因）</li>
+<li>若有缺省构造函数，此时如果成员对象没有显式通过成员初始化列表中初始化，则自动隐含调用缺省构造函数(default constructor).  性能方面？（避免双重初始化）</li>
+<li>构造函数与析构函数的调用顺序</li>
+<li>类的成员对象（public or private）<ul>
+<li>把成员对象声明为public不会影响成员对象的封装性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="友元函数与友元类"><a href="#友元函数与友元类" class="headerlink" title="友元函数与友元类"></a>友元函数与友元类</h3><ul>
+<li>为什么使用友元<ul>
+<li>为什么要使用友元函数</li>
+<li>两个类要共享数据的时候</li>
+<li>运算符重载的某些场合需要使用友元</li>
+<li>使用友元函数可提高性能</li>
+<li>用友元函数可以访问两个或多个类的私有数据，较其它方法使人们更容易理解程序的逻辑关系</li>
+</ul>
+</li>
+<li>缺点:破环了类的封装机制</li>
+<li>总结：<ul>
+<li>类的友元函数在类作用域之外定义，但可以访问类的私有和保护成员</li>
+<li>尽管类定义中有友元函数原型，友元函数仍然不是成员函数</li>
+<li>由于友元函数不是任何类的成员函数，所以不能用句柄(对象)加点操作符来调用</li>
+<li>public, private, protected成员访问符与友员关系的声明无关，因此友元关系声明可在类定义的任何位置，习惯上在类定义的开始位置</li>
+<li>友元关系是指定的，不是获取的，如果让类B成为类A的友元类，类A必须显式声明类B为自己的友元类</li>
+<li>友元关系不满足对称性和传递性</li>
+<li>如果一个友元函数想与两个或更多类成为友元关系，在每个类中都必须声明为友元函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h3><ul>
+<li>为什么使用<ul>
+<li>直到运行时才能知道需要多少对象空间；</li>
+<li>不知道对象的生存期到底有多长；</li>
+<li>直到运行时才知道一个对象需要多少内存空间</li>
+</ul>
+</li>
+<li>使用方法<ul>
+<li>基本数据类型<ul>
+<li><code>double *ptr = new double(3.14);</code></li>
+<li><code>delete ptr</code></li>
+</ul>
+</li>
+<li>类对象<ul>
+<li><code>Cls *ptr = new Cls();</code></li>
+<li><code>delete ptr;</code></li>
+</ul>
+</li>
+<li>数组<ul>
+<li><code>int *array = new int[size];</code></li>
+<li><code>delete [] array;</code></li>
+<li><code>Cls *clsarray = new Cls[size];</code></li>
+<li><code>delete [] clsarray;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="static-1"><a href="#static-1" class="headerlink" title="static"></a>static</h3><ul>
+<li>初始化<ul>
+<li>显式初始化<ul>
+<li>静态常量整数成员可在类定义中初始化（长整形/短整形/枚举）</li>
+<li><code>const static int i = 0;</code> //ok</li>
+<li>其它情况必须在类外部定义和初始化。</li>
+<li><code>static int i = 0;</code> //error</li>
+<li>const数组成员的初始化？*<br>  声明为const static数组，并在外部初始化</li>
+</ul>
+</li>
+<li>未显示初始化<ul>
+<li>静态基本类型的数据成员缺省初始化为0</li>
+<li>静态抽象数据类型(类对象)的数据成员默认调用缺省构造函数</li>
+<li>静态成员的空间分配并不在类的构造函数中完成，也不会在类的析构函数里完成空间回收</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>访问<ul>
+<li>可直接通过类名+::访问</li>
+<li>没有this指针（为什么？）<br>  static 成员函数独立于对象存在。而this指针必须指向类的具体的对象</li>
+<li>不能加const（为什么？）<br>  const修饰符用于表示函数不能修改成员变量的值，该函数必须是含有this指针</li>
+<li>可通过对象访问(public)，也可直接通过类名+::访问</li>
+<li>不能访问非静态数据成员，也不能调用非静态成员函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>常量对象和常成员函数</li>
+<li>对象的组合</li>
+<li>友元函数和友元类</li>
+<li>this指针(隐含参数，作用：级联调用)</li>
+<li>动态内存分配</li>
+<li>静态类成员</li>
+</ul>
+<h2 id="Chapter-11"><a href="#Chapter-11" class="headerlink" title="Chapter 11"></a>Chapter 11</h2><h3 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h3><ul>
+<li>定义方式: <code>ClassName operator@([const ClassName&amp; A])</code></li>
+<li>调用方式: <ul>
+<li>普通函数<ul>
+<li>全局函数: 函数名(参数列表)</li>
+<li>类成员函数: 对象.函数名(参数列表)等</li>
+</ul>
+</li>
+<li>重载的运算符<br>  使用时以表达式形式出现: HugeIntA + HugeIntB</li>
+</ul>
+</li>
+<li>针对对象，三个不用重载的运算符：<ul>
+<li>assignment operator (=) </li>
+<li>address operators (&amp;) </li>
+<li>comma operators (,) </li>
+</ul>
+</li>
+<li>限制<ul>
+<li>重载运算符应该仿效其相应的内置对象的功能</li>
+<li>重载成的成员函数必须是非static的(带着问题思考)<br>  HugeInt operator+(const HugeInt&amp; a);</li>
+<li>不能更改Precedence(优先级), Associativity(结合律) 以及 Number of Operands(操作数数目)</li>
+<li>仅能重载现有运算符，不能创造新运算符</li>
+</ul>
+</li>
+</ul>
+<h3 id="运算符函数"><a href="#运算符函数" class="headerlink" title="运算符函数"></a>运算符函数</h3><p>运算符函数可以是成员函数或者全局函数</p>
+<ul>
+<li>当重载为类的成员函数时<ul>
+<li>非静态的类成员函数</li>
+<li>使用this指针隐性获取操作左值</li>
+<li>左操作数(或唯一的操作数)必须为该类对象(或对象引用)</li>
+<li>将自动包含该类对象(或其引用)作为操作数，函数参数个数等于运算符目数-1</li>
+</ul>
+</li>
+<li>当重载为全局函数时<ul>
+<li>形式<pre><code>class HugeInt {
+    friend HugeInt operator+(const HugeInt &amp;, int);
+};
+</code></pre></li>
+<li>函数参数个数等于运算符的目数</li>
+<li>全局函数: 是否访问私有数据<ul>
+<li>Friend（可访问私有数据）复习~~~</li>
+<li>Non-friend</li>
+</ul>
+</li>
+<li>思考：必须重载为全局函数的情况<ul>
+<li>左操作数必须为不同类型对象或一个基本类型对象</li>
+<li>使运算符具有可交换性<ul>
+<li>HugeInteger + int 和 int + HugeInteger</li>
+<li>成员函数+参数调换的全局函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设计原则<ul>
+<li>( ), [ ], -&gt;和赋值(=, +=, -=等)运算符 <strong>必须</strong> 重载为成员函数</li>
+<li>>>, &lt;&lt;和需要支持交换律(Commutative)的运算符重载为全局函数</li>
+<li>其余运算符可以选择重载为成员或全局函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="输入输出流运算符重载"><a href="#输入输出流运算符重载" class="headerlink" title="输入输出流运算符重载"></a>输入输出流运算符重载</h3><p>输出流重载 <code>friend ostream &amp;operator&lt;&lt;(ostream&amp;, const cls &amp;)</code><br>输入流重载 <code>friend istream &amp;operator&gt;&gt;(istream&amp;)</code></p>
+<h3 id="一元运算符重载"><a href="#一元运算符重载" class="headerlink" title="一元运算符重载"></a>一元运算符重载</h3><p>例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class String &#123;</span><br><span class="line">public:</span><br><span class="line">    bool operator!( ) __const__;</span><br><span class="line">&#125;;</span><br><span class="line">class String &#123;</span><br><span class="line">    friend bool operator!( __const__ String &amp;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="二元运算符重载"><a href="#二元运算符重载" class="headerlink" title="二元运算符重载"></a>二元运算符重载</h3><ul>
+<li>带有一个参数的成员函数<br>  前提条件是仅当左操作数是该函数所在类的对象</li>
+<li>带有二个参数的全局函数</li>
+<li>其中一个参数必须是对象或对象引用<br>例子：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class String &#123;</span><br><span class="line">public:</span><br><span class="line">    bool operator&lt;( const String &amp;) const;</span><br><span class="line">&#125;;</span><br><span class="line">class String &#123;</span><br><span class="line">    friend bool operator&lt;( const String &amp;, const String &amp;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="运算符重载小结"><a href="#运算符重载小结" class="headerlink" title="运算符重载小结"></a>运算符重载小结</h3><ul>
+<li><code>const Array &amp;operator=( const Array &amp; );</code><br>为何返回值要加&amp;和const？<ul>
+<li>&amp;为了在a=(b=c)时提高性能</li>
+<li>参数的&amp;为了防止自我复制</li>
+<li>Const类型的返回值表示对相关对象的保护，实现禁左。禁止(a=b)=c</li>
+</ul>
+</li>
+<li>虚悬指针（产生原因）与指针回收问题<br>  关于delete之后的指针使用（有的编译器可以访问，但会有潜在的错误）</li>
+<li>通常会为任何一个使用动态分配内存的类同时提供一组函数（重要！）：<ul>
+<li>复制构造函数</li>
+<li>析构函数</li>
+<li>重载的赋值运算符函数</li>
+</ul>
+</li>
+<li>如何阻止类对象的复制<br>  将重载的赋值运算符以及拷贝构造函数设置为private</li>
+</ul>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><ul>
+<li>同类对象转换 ： 初始化对象,拷贝构造函数</li>
+<li><p>非同类对象转换：</p>
+<ul>
+<li>转换构造函数</li>
+<li>重载强制类型转换运算符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">函数声明形式</span><br><span class="line">    A::operator int() const; // 不需要返回值,不修改原对象</span><br><span class="line">    实现：A -&gt; int</span><br><span class="line">    A::operator OtherClass() const;</span><br><span class="line">    实现：A-&gt; OtherClass</span><br><span class="line"></span><br><span class="line">用户调用：</span><br><span class="line">     A s；</span><br><span class="line">     static_cast&lt;int&gt;(s);</span><br><span class="line">     static_cast&lt;OtherClass&gt;(s);</span><br><span class="line">编译器调用：</span><br><span class="line">s.operator int(); s.operator OtherClass();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>几个常用的cast<br>  dynamic_cast:   通常在基类和派生类之间转换时使用<br>  const_cast:   主要针对const和volatile的转换.<br>  static_cast:   一般的转换<br>  reinterpret_cast:   用于进行没有任何关联之间的转换，比如一个字符指针转换为一个整形数。</p>
+</li>
+<li>小结<ul>
+<li>转换构造函数</li>
+<li>重载强制类型转换运算符</li>
+<li>隐式调用原则：<ul>
+<li>先查找符合要求的函数</li>
+<li>再调用转换运算</li>
+<li>转换运算不能级联调用(仅能调用一次)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>哪些运算符可以重载？何时需要重载？有何限制？如何重载？<br>  “.”,”.*”,”::”,”?:”不能重载<br>  “=“,”&amp;”,”,”可以直接使用但有时也需要重载</li>
+<li>成员函数 vs 全局函数</li>
+<li>( ), [ ], -&gt;和赋值(=, +=, -=等)<br>  运算符必须重载为成员函数（有时函数需要被重载为常成员函数）<br>  支持交换律的运算符必须重载为全局函数</li>
+<li>拷贝构造函数和转换构造函数</li>
+<li>自定义String类 vs 标准string类</li>
+</ul>
+<h2 id="Chapter-12"><a href="#Chapter-12" class="headerlink" title="Chapter 12"></a>Chapter 12</h2><h3 id="is-a与has-a的区别"><a href="#is-a与has-a的区别" class="headerlink" title="is-a与has-a的区别"></a>is-a与has-a的区别</h3><ul>
+<li>is-a代表继承<ul>
+<li>一个类继承自另一个类</li>
+<li>属于更加专有的一类对象</li>
+<li>可以一个类继承一些行为，也可修改甚至创建新的行为<br>  例如vehicle类，有加速、减速等行为，car继承vehicle，同样有这些行为，也可以有新的行为（如打开后备箱等）</li>
+</ul>
+</li>
+<li>has-a代表组合关系<ul>
+<li>一个对象包含其它的成员对象<br>  例如Employee类中包含firstname、lastname、birthdate、hiredate等对象</li>
+</ul>
+</li>
+</ul>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ul>
+<li>作用<ul>
+<li>软件复用；</li>
+<li>对事物进行分类；</li>
+<li>支持软件的增量开发；</li>
+<li>对概念进行组合。</li>
+</ul>
+</li>
+<li>声明：<code>class &lt;派生类名&gt;:&lt;继承方式&gt;&lt;基类名&gt; {……};</code>（多继承在后面添加）</li>
+<li>访问规则<ul>
+<li>派生类吸纳基类的数据成员及成员函数（隐性）</li>
+<li>派生类的成员函数如何访问基类的数据成员和成员函数？(public继承)<ul>
+<li>可以访问基类中的非private数据成员及成员函数</li>
+<li>无法直接访问基类的private成员</li>
+<li>可以通过基类中提供的非private成员函数实现对基类中private数据成员进行修改</li>
+</ul>
+</li>
+<li>通常派生类需要重新定义一些成员函数，以实现派生类特有的功能及操作</li>
+</ul>
+</li>
+<li>继承中的访问模式<ul>
+<li>基类的public成员能够被程序中所有函数访问</li>
+<li>基类的private成员只能被基类的成员函数和友元访问</li>
+<li>基类的protected成员只能被基类的成员和友元以及派生类的成员和友元访问。<ul>
+<li>注意：不能被类的实例（对象）访问。</li>
+</ul>
+</li>
+<li>派生类如何访问基类的数据成员？<ul>
+<li>默认情况：派生类成员简单地使用成员名就可以引用基类的public成员和protected成员。</li>
+<li>当派生类重新定义了基类的成员函数时，访问方式：<br>  base-class name:: + 成员函数</li>
+</ul>
+</li>
+<li>只要在派生类中重写基类的函数（函数名相同，即使参数不同），就无法默认调用基类的相关函数，此时基类中的函数需要“基类::函数名”来调用。</li>
+</ul>
+</li>
+</ul>
+<h3 id="派生类与基类的关系"><a href="#派生类与基类的关系" class="headerlink" title="派生类与基类的关系"></a>派生类与基类的关系</h3><ul>
+<li>初始化<ul>
+<li>如果派生类的构造函数没有显示调用基类的构造函数，C++将尝试隐式调用默认的构造函数（前提：基类需要有缺省的构造函数）</li>
+<li>采用成员初始化器列表显示地初始化成员对象和调用基类的构造函数，可以防止重复初始化</li>
+</ul>
+</li>
+<li><p>头文件:在派生类头文件中使用#include包含基类头文件</p>
+<ul>
+<li>告诉编译器基类的存在</li>
+<li>让编译器根据类的定义确定对象的大小，派生类的对象大小取决于派生类显式定义的数据成员和继承自基类的数据成员</li>
+<li>让编译器能够判断派生类是否正确的使用了基类的成员</li>
+</ul>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>影响数据的有效性检查<br>  派生类可以直接访问基类的protected数据成员</li>
+<li>派生类依赖于基类的实现<ul>
+<li>基类的数据成员发生改变有可能影响派生类的实现</li>
+<li>软件“易碎”或“脆弱”，不够健壮</li>
+</ul>
+</li>
+<li>基类仅向派生类提供服务，则可使用protected类型声明，其他情况慎用protected</li>
+</ul>
+</li>
+<li>在派生类中重定义基类成员<ul>
+<li>通过调用基类的public成员函数来访问基类的私有数据成员</li>
+<li>当功能相同时，尽量调用成员函数，以避免代码拷贝。</li>
+<li>重定义基类成员函数时，一定要使用“::”访问基类成员，否则会引起无限递归，例如：earnings()</li>
+<li>注意print()和earnings()的重新定义：调用基类的print()和earnings()函数<br>  符合软件工程要求：使用继承，通过调用成员函数隐藏了数据，保证了数据的一致性。</li>
+</ul>
+</li>
+</ul>
+<h3 id="基类、派生类中的构造与析构函数"><a href="#基类、派生类中的构造与析构函数" class="headerlink" title="基类、派生类中的构造与析构函数"></a>基类、派生类中的构造与析构函数</h3><ul>
+<li>构造顺序<ul>
+<li>建立派生类的实例对象时、必须调用基类的构造函数来初始化派生类对象的继承成员。</li>
+<li>派生类的构造函数既可以隐式调用基类的构造函数，也可以在派生类的构造函数中通过给基类提供初始化值显式地调用。</li>
+<li>基类构造函数-&gt;派生类构造函数</li>
+</ul>
+</li>
+<li>析构顺序<br>  析构函数的调用顺序和构造函数的顺序相反，因此派生类的析构函数在基类析构函数之前调用。</li>
+<li>包含成员对象的情况，假设基类和派生类都包含其他类的对象：<ul>
+<li>在建立派生类的对象时，首先执行基类成员对象的构造函数，接着执行基类的构造函数，然后执行派生类的成员对象的构造函数，最后才执行派生类的构造函数。析构函数的调用次序与调用构造函数的次序相反。<br>  基类成员对象初始化—&gt;基类的构造函数—&gt;派生类成员对象初始化—&gt;派生类构造函数</li>
+<li>建立成员对象的顺序是对象在类定义中的声明顺序。成员初始化器中的顺序不影响建立对象的顺序。   </li>
+</ul>
+</li>
+</ul>
+<h3 id="继承小结"><a href="#继承小结" class="headerlink" title="继承小结"></a>继承小结</h3><ul>
+<li>公有继承<ol>
+<li>基类成员对其对象的可见性：<br>公有成员可见，其他不可见。这里保护成员同于私有成员。</li>
+<li>基类成员对派生类的可见性：<br>公有成员和保护成员可见，而私有成员不可见。这里保护成员同于公有成员。</li>
+<li>基类成员对派生类对象的可见性：<br>公有成员可见，其他成员不可见。<br>一定要区分派生类的对象和派生类中的成员函数对基类的访问是不同的。</li>
+</ol>
+</li>
+<li>私有继承<ol>
+<li>基类成员对其对象的可见性：<br>公有成员可见，其他成员不可见。（同前）</li>
+<li>基类成员对派生类的可见性：<br>公有成员和保护成员可见，私有成员不可见。（同前）</li>
+<li>基类成员对派生类对象的可见性：<br>所有成员都不可见。<br>保护继承与私有继承类似</li>
+</ol>
+</li>
+<li>总结<br>  不论公有继承还是私有继承，基类成员对于派生类的访问权限是不变的。（可访问公有或保护类型成员）<br>  变化的是派生类的对象以及派生类的派生类对基类成员的访问权限。<br>  基类和派生类的定义<br>  Protected成员<br>  基类和派生类的关系：public，proteced，private<br>  继承关系中构造函数和析构函数顺序<br>  复合(has-a)和继承(is-a)的关系<br>  “使用”和”知道”</li>
+</ul>
+<h2 id="Chapter-13"><a href="#Chapter-13" class="headerlink" title="Chapter 13"></a>Chapter 13</h2><h3 id="面向对象三大要素"><a href="#面向对象三大要素" class="headerlink" title="面向对象三大要素"></a>面向对象三大要素</h3><pre><code>数据封装
+继承
+多态
+</code></pre><h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><ul>
+<li>解释1：同样的消息被类的不同对象接收时导致的完全不同的行为的一种现象。这里所说的消息即对类的成员函数的调用。 </li>
+<li>解释2：通过指向派生类的基类指针，调用派生类的函数; 将不同的派生类对象都当作基类来处理，并根据对象不同产生不同的行为，以屏蔽各派生类对象之间的差异。写出通用的代码，使得程序员可以方便地处理普遍性问题。</li>
+<li>C++语言支持两种类型的多态：<ul>
+<li>编译时的多态(静态多态) ——函数重载</li>
+<li>运行时的多态(动态多态) ——虚函数</li>
+</ul>
+</li>
+<li>多态性提高了软件的可扩展性，使得可以用与接收消息对象类型无关的方式编写</li>
+</ul>
+<h3 id="继承中的对象关系"><a href="#继承中的对象关系" class="headerlink" title="继承中的对象关系"></a>继承中的对象关系</h3><ul>
+<li>Invoking Base-Class Functions from Derived-Class Objects（基类指针指向派生类，调用基类函数）<br> 结论: 调用基类还是派生类的函数，取决于句柄的类型，而不是句柄指向的实际对象类型</li>
+<li>Aiming Derived-Class Pointers at Base-Class Objects（派生类指针指向基类，错误）</li>
+<li>Derived-Class Member-Function Calls via Base-Class Pointers（基类指针指向派生类，调用派生类函数，错误）<br>  结论: 通过对象句柄，仅能调用该句柄类型的成员函数<br>  解决办法: downcasting(dynamic_cast)</li>
+</ul>
+<h3 id="虚函数-1"><a href="#虚函数-1" class="headerlink" title="虚函数"></a>虚函数</h3><ul>
+<li>语法<ul>
+<li>调用哪个(基类/派生类)虚函数，由对象类型而不是句柄类型决定.</li>
+<li>虚函数用于继承结构中的基类和派生类，以实现多态.</li>
+<li>派生类中覆盖(Overridden)的虚函数和基类中的虚函数必须函数签名和返回值均相同.<br>  包括函数名称、返回值、参数个数、类型、是否const都要一致</li>
+</ul>
+</li>
+<li>调用虚函数的两种方式<ul>
+<li>通过指向派生类的基类指针(或引用)调用，程序会在执行时(execution time)根据对象类型动态选择合适的派生类函数 – 动态绑定( dynamic binding )或延迟绑定( late binding ).</li>
+<li>通过对象名和点操作符调用，程序在编译时(compile time)即根据对象类型确定函数– 静态绑定( static binding ).<ul>
+<li>只有通过引用或指针来访问对象的虚函数时才进行动态绑定。</li>
+<li>通过引用或指针访问对象的非虚成员函数，采用静态绑定。（与句柄类型的成员函数代码绑定）</li>
+<li>通过“类名+::”访问对象成员函数，也采用静态绑定。</li>
+<li>基类构造函数中对虚函数的调用不采用动态绑定。</li>
+<li>通过指针访问其他成员函数并调用虚函数时仍需动态绑定。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>限制</p>
+<ul>
+<li>只有类成员才能声明为虚函数</li>
+<li>静态成员函数不能是虚函数</li>
+<li>构造函数不能是虚函数</li>
+<li><p>析构函数可以是虚函数，并且通常声明为虚函数(注意基类和派生类的析构函数不同名)<br>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">commissionEmployeePtr = &amp;basePlusCommissionEmployee</span><br><span class="line">delete commissionEmployeePtr;</span><br></pre></td></tr></table></figure>
+<p>调用的是basePlusCommissionEmployee的析构函数</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="纯虚函数与抽象类"><a href="#纯虚函数与抽象类" class="headerlink" title="纯虚函数与抽象类"></a>纯虚函数与抽象类</h3><ul>
+<li>语法 : virtual void function() const <strong>= 0</strong>;</li>
+<li>Abstract Class(抽象类): 包含一个或者多个纯虚函数的类。无法实例化(但可以声明指针和引用)，只能用于继承。<pre><code>Shape obj;              // Error
+Rectangle objRectangle;
+Shape *ptr = &amp;objRectangle; // OK
+Shape &amp;ref = objRectangle;  // OK
+</code></pre></li>
+<li>作用：为派生类提供一个基本框架或公共接口。</li>
+<li>Concrete Class(具体类): 不包含纯虚函数，可以实例化。</li>
+</ul>
+<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>成员函数是否声明为虚函数，取决于是否需要多态性支持</li>
+<li>虚函数是否声明为纯虚函数，取决于该函数对于当前类是否有意义，以及当前类是否需要实例化</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-06-05T16:23:09.480Z" itemprop="dateUpdated">2018-06-06 00:23:09</time>
+</span><br>
+
+
+        
+        感谢您阅读这篇文章，如您有任何疑问，可以在下方评论，或邮件联系我！
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.zjdx1998.ml">
+            <img src="/img/avatar.jpg" alt="Jerome">
+            Jerome
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/期末复习/">期末复习</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.zjdx1998.ml/2018/06/05/c-review/&title=《大一下学期面向对象程序设计（1）期末复习》 — 浙江大傻屌's Blog&pic=http://www.zjdx1998.ml/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zjdx1998.ml/2018/06/05/c-review/&title=《大一下学期面向对象程序设计（1）期末复习》 — 浙江大傻屌's Blog&source=浙江大傻屌的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zjdx1998.ml/2018/06/05/c-review/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《大一下学期面向对象程序设计（1）期末复习》 — 浙江大傻屌's Blog&url=http://www.zjdx1998.ml/2018/06/05/c-review/&via=http://www.zjdx1998.ml" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.zjdx1998.ml/2018/06/05/c-review/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/06/05/discretemathfinalreview/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">离散数学期末复习</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/06/03/18-6-icpcjsxz/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">2018ACM-ICPC江苏邀请赛（徐州）参赛总结</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PeRp6A5RyU3g4FfBLzwRoUhJ-gzGzoHsz",
+            appKey: "jYlLQOKQP9jG5dUSrEjiBI5e",
+            avatar: "mm",
+            placeholder: "欢迎留言~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Jerome &copy; 2018</span>
+            <span>
+                
+                Power by Jerome Thanks Theme indigo
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.zjdx1998.ml/2018/06/05/c-review/&title=《大一下学期面向对象程序设计（1）期末复习》 — 浙江大傻屌's Blog&pic=http://www.zjdx1998.ml/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zjdx1998.ml/2018/06/05/c-review/&title=《大一下学期面向对象程序设计（1）期末复习》 — 浙江大傻屌's Blog&source=浙江大傻屌的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zjdx1998.ml/2018/06/05/c-review/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《大一下学期面向对象程序设计（1）期末复习》 — 浙江大傻屌's Blog&url=http://www.zjdx1998.ml/2018/06/05/c-review/&via=http://www.zjdx1998.ml" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.zjdx1998.ml/2018/06/05/c-review/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIElEQVR42u3a0W7CMAwFUP7/pztpT0ig7tpu0UhOntAYTU4e3NjO4xGP43c8f37+y+t/Vr89XsbjjoGBgfG1jON0nDN6y5rP9YaKgYGxASMJspNgncySz4uBgYGRBL6cXVgKBgYGxkUBd56g5k/AwMDAqCaxk6JY/rTbc3EMDIwvZPQW8ZnPt/c3MDAw/j3jGIz7Qm15JRgYGEszksL9tcnqHQktBgbG2oxJyjo5zM0PiH+8NzAwMJZjVH/WuzxRfg/kjQEMDIwNGJPDWRKIq8s934g3v8LAwNiMkR8EE3xyseyCFiYGBsbSjLx81ktH81CbJ8nlxgAGBsaijDzgVqfv3ZdIAjoGBsaqjElLoFpW621WVIbDwMBYmpGnssm3Cbi6ZXmSjIGBsSojL8dXYUm6e9mVDgwMjKUZecswP9hVr4iV3w8YGBibMfIgWA211WA62ggMDIxtGOfHr2r5bH6ILDwZAwNjaUay9MlC89G7foGBgbEn4zwgVgN0rwxXvUCGgYGxDyNPNfMt6F0Fy2fHwMDYh1FtFVQT0SQBnpQIMTAw1mZMUs1kb3qHznJDAgMDY2nGZ7qE1YZl9QkYGBg7MKoXLPLwmmxHL+BiYGDsyegd+/LIXcihW5cwMDAwMK5qNOYXLMpJNQYGBkZQ6J8cEJNSWrmbgYGBsRwjSWJ7Fy+qmOYhEgMDY2lGLwXtleTyQJ80L0f9DQwMjO9g/AD19J07YyqYHAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '干嘛呢！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
