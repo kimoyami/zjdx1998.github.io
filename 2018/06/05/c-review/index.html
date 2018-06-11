@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.zjdx1998.ml/2018/06/05/c-review/ios.jpg">
 <meta property="og:image" content="http://www.zjdx1998.ml/2018/06/05/c-review/fun.jpg">
-<meta property="og:updated_time" content="2018-06-06T01:27:27.361Z">
+<meta property="og:updated_time" content="2018-06-11T09:56:08.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大一下学期面向对象程序设计（1）期末复习">
 <meta name="twitter:description" content="期末复习总览占比分布期末 70% 作业 20% 考勤 10% 笔试阅读程序 4题各5分 填空 2题各10分 5空 上机 3*20分 考试要点构造函数、析构函数拷贝构造函数什么时候使用？ 传值，返回值 例子(共调用3+2次) :     add(cls x,cls y){         return x+y;      }     add(x,y)  常成员函数Composition函数初始化先对">
@@ -255,7 +255,7 @@ A.obj B.obj 链接 -&gt; B.exe
 <ul>
 <li>不带参数的构造函数</li>
 <li><p><strong>所有参数都有默认值的构造函数</strong><br>考虑以下例子为什么编译失败(缺省构造函数重载失败)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class A&#123;  </span><br><span class="line">    int x, y;</span><br><span class="line">public:</span><br><span class="line">    A(int x = 0,y = 0)          </span><br><span class="line">        x = x1;</span><br><span class="line">        y = y1;</span><br><span class="line">    &#125; </span><br><span class="line">    A(int x1)&#123;</span><br><span class="line">        x = x1;</span><br><span class="line">        y = 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class A&#123;  </span><br><span class="line">    int x, y;</span><br><span class="line">public:</span><br><span class="line">    A(int x1 = 0,int y1 = 0)          </span><br><span class="line">        x = x1;</span><br><span class="line">        y = y1;</span><br><span class="line">    &#125; </span><br><span class="line">    A(int x1)&#123;</span><br><span class="line">        x = x1;</span><br><span class="line">        y = 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>只要类中提供了构造函数，即使没有提供缺省构造函数，编译程序将不再提供缺省构造函数。</p>
 </li>
@@ -504,7 +504,7 @@ A.obj B.obj 链接 -&gt; B.exe
 </li>
 </ul>
 <h3 id="输入输出流运算符重载"><a href="#输入输出流运算符重载" class="headerlink" title="输入输出流运算符重载"></a>输入输出流运算符重载</h3><p>输出流重载 <code>friend ostream &amp;operator&lt;&lt;(ostream&amp;, const cls &amp;)</code><br>输入流重载 <code>friend istream &amp;operator&gt;&gt;(istream&amp;)</code></p>
-<h3 id="一元运算符重载"><a href="#一元运算符重载" class="headerlink" title="一元运算符重载"></a>一元运算符重载</h3><p>例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class String &#123;</span><br><span class="line">public:</span><br><span class="line">    bool operator!( ) __const__;</span><br><span class="line">&#125;;</span><br><span class="line">class String &#123;</span><br><span class="line">    friend bool operator!( __const__ String &amp;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="一元运算符重载"><a href="#一元运算符重载" class="headerlink" title="一元运算符重载"></a>一元运算符重载</h3><p>例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class String &#123;</span><br><span class="line">public:</span><br><span class="line">    bool operator!( ) const;</span><br><span class="line">&#125;;</span><br><span class="line">class String &#123;</span><br><span class="line">    friend bool operator!( const String &amp;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h3 id="二元运算符重载"><a href="#二元运算符重载" class="headerlink" title="二元运算符重载"></a>二元运算符重载</h3><ul>
 <li>带有一个参数的成员函数<br>  前提条件是仅当左操作数是该函数所在类的对象</li>
 <li>带有二个参数的全局函数</li>
@@ -1105,7 +1105,7 @@ ios::app：向文件末尾添加数据
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-06-06T01:27:27.361Z" itemprop="dateUpdated">2018-06-06 09:27:27</time>
+    最后更新时间：<time datetime="2018-06-11T09:56:08.383Z" itemprop="dateUpdated">2018-06-11 17:56:08</time>
 </span><br>
 
 
