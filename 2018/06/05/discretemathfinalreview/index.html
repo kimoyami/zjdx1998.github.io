@@ -30,7 +30,7 @@
 <meta property="og:description" content="考试结构 10道选择题(含多选,但答案不超过两个)20分3道证明题来自于集合论和代数结构（重难点)      数理逻辑    命题逻辑的基本概念命题与联结词命题(Proposition) 概念：具有唯一真值的陈述句 唯一性：或真或假但不能两者都是的 命题所用符号：常用小写２６个英文字母 经典例子 $x=3$ × 我现在说假话 × （悖论) 请不要吸烟! ×(祈使句) 这朵花真美丽啊！ （感叹句)">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.zjdx1998.ml/2018/06/05/discretemathfinalreview/pic1.png">
-<meta property="og:updated_time" content="2018-06-18T12:08:21.081Z">
+<meta property="og:updated_time" content="2018-06-24T07:32:41.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散数学期末复习">
 <meta name="twitter:description" content="考试结构 10道选择题(含多选,但答案不超过两个)20分3道证明题来自于集合论和代数结构（重难点)      数理逻辑    命题逻辑的基本概念命题与联结词命题(Proposition) 概念：具有唯一真值的陈述句 唯一性：或真或假但不能两者都是的 命题所用符号：常用小写２６个英文字母 经典例子 $x=3$ × 我现在说假话 × （悖论) 请不要吸烟! ×(祈使句) 这朵花真美丽啊！ （感叹句)">
@@ -496,7 +496,7 @@ table th:first-of-type {
 <li><strong>幂等律</strong> $A \Leftrightarrow A \lor A , A\Leftrightarrow A \wedge A $</li>
 <li>交换律 $A \wedge B \Leftrightarrow B \wedge A , A \lor B \Leftrightarrow B \lor A$</li>
 <li><strong>结合律</strong> $(A \lor B) \lor C\Leftrightarrow A \lor (B \lor C)  (A \wedge B) \wedge C\Leftrightarrow A \wedge (B \wedge C)$</li>
-<li><strong>分配律</strong>  $ (A \lor B) \lor C\Leftrightarrow A \lor (B \lor C)\qquad<br>(A \wedge B) \wedge C\Leftrightarrow A \wedge (B \wedge C)$</li>
+<li><strong>分配律</strong>  $ (A \lor B) \wedge C\Leftrightarrow (A \wedge C) \lor (B \wedge C)\qquad<br>(A \wedge B) \lor C\Leftrightarrow (A \lor C) \wedge (B \lor C)$</li>
 <li><strong>德摩根律</strong> $\neg(A \lor B) \Leftrightarrow \neg A\wedge\neg B , \neg(A \wedge B) \Leftrightarrow \neg A\lor\neg B$</li>
 <li><strong>吸收律</strong> $A \lor (A \wedge B) \Leftrightarrow A , A \wedge (A \lor B) \Leftrightarrow A$</li>
 <li>零律 $A \lor 1 \Leftrightarrow 1 , A \wedge 0 \Leftrightarrow 0$</li>
@@ -975,8 +975,8 @@ table th:first-of-type {
 <ul>
 <li>消去量词等值式<br>设个体域为有限集$D=\lbrace a_1,a_2,\cdots,a_n \rbrace$,则有<br>(1) $\forall xA(x)\Leftrightarrow A(a_1)\wedge A(a_2)\wedge\cdots\wedge A(a_n)$<br>(2) $\exists xA(x)\Leftrightarrow A(a_1)\lor A(a_2)\lor\cdots\lor A(a_n)$</li>
 <li>量词否定等值式<br>设公式$A(x)$含有自由出现的个体变项$x$,则<br>(1) $\neg\forall xA(x)\Leftrightarrow\exists x\neg A(x)$<br>(2) $\neg\exists xA(x)\Leftrightarrow\forall x\neg A(x)$</li>
-<li>量词辖域收缩与扩张等值式<br>x在公式A(x)中自由出现，但不在B中自由出现<br>$$<br>\begin{split}<br>  \forall x(A(x) \lor B) &amp;\Leftrightarrow \forall xA(x) \lor B<br>  \newline<br>  \forall x(A(x) \wedge B) &amp;\Leftrightarrow \forall xA(x) \wedge B<br>  \newline<br>  \forall x(A(x) \to B) &amp;\Leftrightarrow \exists xA(x) \to B<br>  \newline<br>  \forall x(B \to A(x)) &amp;\Leftrightarrow \forall B \to xA(x)<br>  \newline<br>  \exists x(A(x) \lor B) &amp;\Leftrightarrow \exists xA(x) \lor B<br>  \newline<br>  \exists x(A(x) \wedge B) &amp;\Leftrightarrow \exists xA(x) \wedge B<br>  \newline<br>  \exists x(A(x) \to B) &amp;\Leftrightarrow \forall xA(x) \to B<br>  \newline<br>  \exists x(B \to A(x)) &amp;\Leftrightarrow \exists B \to xA(x)<br>\end{split}<br>$$</li>
-<li>量词分配等值式<br>x在公式A(x)和B(x)中自由出现<br>(1) $\forall x(A(x)\wedge B(x))\Leftrightarrow \forall xA(x) \wedge \forall xB(x)$<br>(2) $\exists x(A(x)\lor B(x))\Leftrightarrow \exists xA(x) \lor \exists xB(x)$<br>(3) $\exists x(A(x)\to B(x))\Leftrightarrow \forall xA(x) \lor \exists xB(x)$<br><strong>注意:全称量词对析取无分配律，存在量词对合取无分配律</strong></li>
+<li>量词辖域收缩与扩张等值式<br>x在公式A(x)中自由出现，但不在B中自由出现<br>$$<br>\begin{split}<br>  \forall x(A(x) \lor B) &amp;\Leftrightarrow \forall xA(x) \lor B<br>  \newline<br>  \forall x(A(x) \wedge B) &amp;\Leftrightarrow \forall xA(x) \wedge B<br>  \newline<br>  \forall x(A(x) \to B) &amp;\Leftrightarrow \exists xA(x) \to B<br>  \newline<br>  \forall x(B \to A(x)) &amp;\Leftrightarrow B \to \forall xA(x)<br>  \newline<br>  \exists x(A(x) \lor B) &amp;\Leftrightarrow \exists xA(x) \lor B<br>  \newline<br>  \exists x(A(x) \wedge B) &amp;\Leftrightarrow \exists xA(x) \wedge B<br>  \newline<br>  \exists x(A(x) \to B) &amp;\Leftrightarrow \forall xA(x) \to B<br>  \newline<br>  \exists x(B \to A(x)) &amp;\Leftrightarrow B \to \exists xA(x)<br>\end{split}<br>$$</li>
+<li>量词分配等值式<br>x在公式A(x)和B(x)中自由出现<br>(1) $\forall x(A(x)\wedge B(x))\Leftrightarrow \forall xA(x) \wedge \forall xB(x)$<br>(2) $\exists x(A(x)\lor B(x))\Leftrightarrow \exists xA(x) \lor \exists xB(x)$<br>(3) $\exists x(A(x)\to B(x))\Leftrightarrow \forall xA(x) \to \exists xB(x)$<br><strong>注意:全称量词对析取无分配律，存在量词对合取无分配律</strong></li>
 <li>即以下等值式不成立(x在公式A(x)和B(x)中自由出现)<ul>
 <li>$\forall x(A(x)\lor B(x))\Leftrightarrow \forall xA(x) \lor \forall xB(x)$</li>
 <li>提示：任意实数，或者是有理数或者是无理数，或者任意实数是有理数，或者任意实数是无理数</li>
@@ -1821,7 +1821,7 @@ table th:first-of-type {
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-06-18T12:08:21.081Z" itemprop="dateUpdated">2018-06-18 20:08:21</time>
+    最后更新时间：<time datetime="2018-06-24T07:32:41.055Z" itemprop="dateUpdated">2018-06-24 15:32:41</time>
 </span><br>
 
 
