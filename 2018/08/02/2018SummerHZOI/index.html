@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?e778f01a25bfd3914f44bdddc1fc0aba"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>2018SummerHZOI讨论 | 浙江大傻屌&#39;s Blog | 谁说我们一定要走别人的路。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="ACM,贪心,二分,dp,平衡树,LCA,dp优化">
+    <meta name="description" content="HZOI专题讨论东南大学 张建东  2018年8月  平衡树BST先复习一下二叉查找树（Binary Search Tree），（又：二叉搜索树，二叉排序树）它或者是一棵空树，或者是具有下列性质的二叉树： 若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。   插入向二叉搜索树中插入新元">
+<meta name="keywords" content="ACM,贪心,二分,dp,平衡树,LCA,dp优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018SummerHZOI讨论">
+<meta property="og:url" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/index.html">
+<meta property="og:site_name" content="浙江大傻屌&#39;s Blog">
+<meta property="og:description" content="HZOI专题讨论东南大学 张建东  2018年8月  平衡树BST先复习一下二叉查找树（Binary Search Tree），（又：二叉搜索树，二叉排序树）它或者是一棵空树，或者是具有下列性质的二叉树： 若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。   插入向二叉搜索树中插入新元">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/8644ebf81a4c510f0b3dafdf6359252dd52aa57e.jpg">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/20140210215304296.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1349877709_4105.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1349877744_7090.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1349877779_5253.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1503_1.jpg">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1209138-20170729151024207-1541824194.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1533147876533.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1533149366004.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1533188420861.png">
+<meta property="og:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/1533186362463.png">
+<meta property="og:updated_time" content="2018-08-02T16:46:11.382Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2018SummerHZOI讨论">
+<meta name="twitter:description" content="HZOI专题讨论东南大学 张建东  2018年8月  平衡树BST先复习一下二叉查找树（Binary Search Tree），（又：二叉搜索树，二叉排序树）它或者是一棵空树，或者是具有下列性质的二叉树： 若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。   插入向二叉搜索树中插入新元">
+<meta name="twitter:image" content="http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/8644ebf81a4c510f0b3dafdf6359252dd52aa57e.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="浙江大傻屌&#39;s Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Jerome</h5>
+          <a href="mailto:zjd_x1998@163.com" title="zjd_x1998@163.com" class="mail">zjd_x1998@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zjdx1998" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">2018SummerHZOI讨论</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">2018SummerHZOI讨论</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-08-02T15:26:13.000Z" itemprop="datePublished" class="page-time">
+  2018-08-02
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ACM/">ACM</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HZOI专题讨论"><span class="post-toc-number">1.</span> <span class="post-toc-text">HZOI专题讨论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#平衡树"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">平衡树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BST"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">BST</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插入"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">插入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查找"><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">查找</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除"><span class="post-toc-number">1.1.1.3.</span> <span class="post-toc-text">删除</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思考"><span class="post-toc-number">1.1.1.4.</span> <span class="post-toc-text">思考</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Treap"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Treap</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#定义"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#更新"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">更新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#旋转"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">旋转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插入-1"><span class="post-toc-number">1.1.2.4.</span> <span class="post-toc-text">插入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除-1"><span class="post-toc-number">1.1.2.5.</span> <span class="post-toc-text">删除</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查排名"><span class="post-toc-number">1.1.2.6.</span> <span class="post-toc-text">查排名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查前驱后继"><span class="post-toc-number">1.1.2.7.</span> <span class="post-toc-text">查前驱后继</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查找第k小数"><span class="post-toc-number">1.1.2.8.</span> <span class="post-toc-text">查找第k小数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#例题讲解"><span class="post-toc-number">1.1.2.9.</span> <span class="post-toc-text">例题讲解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#POJ1442-Black-Box"><span class="post-toc-number">1.1.2.9.1.</span> <span class="post-toc-text">POJ1442 Black Box </span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#POJ2299-Ultra-QuickSort"><span class="post-toc-number">1.1.2.9.2.</span> <span class="post-toc-text">POJ2299 Ultra-QuickSort </span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#BZOJ3196-TYVJ1730-二逼平衡树"><span class="post-toc-number">1.1.2.9.3.</span> <span class="post-toc-text">BZOJ3196(TYVJ1730)二逼平衡树</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#练习题"><span class="post-toc-number">1.1.2.10.</span> <span class="post-toc-text">练习题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Splay"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Splay</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#旋转-1"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">旋转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思想"><span class="post-toc-number">1.1.3.2.</span> <span class="post-toc-text">思想</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#例题讲解-1"><span class="post-toc-number">1.1.3.3.</span> <span class="post-toc-text">例题讲解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#郁闷的出纳员"><span class="post-toc-number">1.1.3.3.1.</span> <span class="post-toc-text">郁闷的出纳员</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#tyvj1729文艺平衡树"><span class="post-toc-number">1.1.3.3.2.</span> <span class="post-toc-text">tyvj1729文艺平衡树</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#练习题-1"><span class="post-toc-number">1.1.3.4.</span> <span class="post-toc-text">练习题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#STL"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">STL</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LCA"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">LCA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tarjan算法"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Tarjan算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#例题讲解-2"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">例题讲解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#POJ-1330-Nearest-Common-Ancestors"><span class="post-toc-number">1.2.1.1.1.</span> <span class="post-toc-text">POJ 1330 Nearest Common Ancestors</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HDU2586-How-far-away"><span class="post-toc-number">1.2.1.1.2.</span> <span class="post-toc-text">HDU2586 How far away ?</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#倍增"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">倍增</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#例题讲解-3"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">例题讲解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#NOIP2013T3-货车运输"><span class="post-toc-number">1.2.2.1.1.</span> <span class="post-toc-text">NOIP2013T3 货车运输</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#NOIP2015-T6-运输计划"><span class="post-toc-number">1.2.2.1.2.</span> <span class="post-toc-text">NOIP2015 T6 运输计划</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RMQ、树链剖分"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">RMQ、树链剖分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#练习题-2"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">练习题</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DP优化"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">DP优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据结构优化"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">数据结构优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线段树、树状数组"><span class="post-toc-number">1.3.1.1.</span> <span class="post-toc-text">线段树、树状数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#NOIP2013T5-花匠"><span class="post-toc-number">1.3.1.1.1.</span> <span class="post-toc-text">NOIP2013T5 花匠</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#单调栈、单调队列"><span class="post-toc-number">1.3.1.2.</span> <span class="post-toc-text">单调栈、单调队列</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Vijos1243生产商品-8"><span class="post-toc-number">1.3.1.2.1.</span> <span class="post-toc-text">Vijos1243生产商品[8]</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#斜率优化"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">斜率优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HDU3507Print-Article"><span class="post-toc-number">1.3.2.1.</span> <span class="post-toc-text">HDU3507Print Article</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四边形优化"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">四边形优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#矩阵加速"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">矩阵加速</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#例题讲解-4"><span class="post-toc-number">1.3.4.1.</span> <span class="post-toc-text">例题讲解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HDU5950-Recursive-sequence"><span class="post-toc-number">1.3.4.1.1.</span> <span class="post-toc-text">HDU5950 Recursive sequence</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">其他</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#练习题-3"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">练习题</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2018SummerHZOI"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">2018SummerHZOI讨论</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-08-02 23:26:13" datetime="2018-08-02T15:26:13.000Z"  itemprop="datePublished">2018-08-02</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ACM/">ACM</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HZOI专题讨论"><a href="#HZOI专题讨论" class="headerlink" title="HZOI专题讨论"></a><center>HZOI专题讨论</center></h1><center>东南大学 张建东</center>
+
+<center>2018年8月</center>
+
+<h2 id="平衡树"><a href="#平衡树" class="headerlink" title="平衡树"></a><center>平衡树</center></h2><h3 id="BST"><a href="#BST" class="headerlink" title="BST"></a>BST</h3><p>先复习一下二叉查找树（Binary Search Tree），（又：<a href="https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91" target="_blank" rel="noopener">二叉搜索树</a>，二叉排序树）它或者是一棵空树，或者是具有下列性质的<a href="https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">二叉树</a>： 若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为<a href="https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91" target="_blank" rel="noopener">二叉排序树</a>。 </p>
+<p><img src="8644ebf81a4c510f0b3dafdf6359252dd52aa57e.jpg" alt=""></p>
+<h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><p>向二叉搜索树中插入新元素时，必须先检测这个元素是否在树中已经存在。如果已经存在，则不进行插入，如果元素不存在则将新元素插入到搜索停止的时候，也就是每次插入都是一个叶子节点。 </p>
+<p>以上图为例，模拟插入6、13、20的过程。</p>
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><p>在一棵不为空的二叉搜索树中查找元素时，如果要查找的元素与根节点的值相等，则返回true 或根节点，如果小于根节点的值，则在左子树查找，如果大于根节点的值，在其右子树中查找。否则，返回false或者NULL。</p>
+<p>以上图为例，模拟查找9、17、 21的过程。</p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>情况较多，这里不再赘述，<a href="https://blog.csdn.net/a1414345/article/details/70186719" target="_blank" rel="noopener">具体可以参考</a></p>
+<h4 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h4><p>如果一棵树除根节点外的每一棵子树都无左子树或都无右子树，那么上述三种操作的效率如何？</p>
+<p>答案：此时树会退化为链，效率由$O(log n)$退化为$O(n)$。</p>
+<p>如何解决？ 👇</p>
+<h3 id="Treap"><a href="#Treap" class="headerlink" title="Treap"></a>Treap</h3><p>treap是一种常用易写的平衡树，单从字母意思来看，treap=tree+heap。</p>
+<p>其中，tree就是BST ，heap是堆。所以treap也可以叫树堆。</p>
+<p>treap具有以下性质：<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Treap详细介绍](https://www.cnblogs.com/BCOI/p/9072444.html)
+">[1]</span></a></sup></p>
+<ul>
+<li>Treap是关于key的二叉排序树（也就是规定的排序方式）。</li>
+<li>Treap是关于priority的堆（按照随机出的优先级作为小根/大根堆)。（非二叉堆，因为不是完全二叉树）</li>
+<li>key和priority确定时，treap唯一。</li>
+</ul>
+<p>为什么除了权值还要在用一个随机值作为排序方法呢?随机分配的优先级，使数据插入后更不容易退化为链。就像是将其打乱再插入。所以用于平衡二叉树。</p>
+<p>根据名字，不难写出如下定义：</p>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> s[<span class="number">2</span>],pri,v,size;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    	v = x; size = <span class="number">1</span>; pri = y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;T[N];</span><br></pre></td></tr></table></figure>
+<p>其中<code>s[2]</code>为当前节点的两个儿子,<code>pri</code>表示优先级,是一个随机值，<code>v</code>代表当前结点点权。</p>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span><span class="params">(<span class="keyword">int</span> &amp;i,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    T[i].size = T[L(i)].size + T[R(i)].size + T[i].cnt;<span class="comment">//我上面没有写cnt,cnt用于统计重复的点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a><strong>旋转</strong></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Rot</span><span class="params">(<span class="keyword">int</span> &amp;y,<span class="keyword">int</span> f)</span></span>&#123; <span class="comment">//y为根,f是旋转方向</span></span><br><span class="line">    <span class="keyword">int</span> x = T[y].s[!f];</span><br><span class="line">    T[y].s[!f] = T[x].s[f];</span><br><span class="line">    T[x].s[f]  = y;</span><br><span class="line">    Update(y);Update(y=x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="20140210215304296.png" alt="参考图" title="">
+                </div>
+                <div class="image-caption">参考图</div>
+            </figure>
+<p>以上图为例，右旋操作就是将<code>root=4</code>的左子树的根节点<code>lson=2</code>的右子树变为<code>root=4</code>的左子树，原来的左子树<code>lson=2</code>变为树根,再将原树根变成现在树根的右子树。左旋同理，所以代码可以仅用<code>f,!f或f^1</code>简写。 套用上面的代码:<code>Rot(4,1);</code> </p>
+<h4 id="插入-1"><a href="#插入-1" class="headerlink" title="插入"></a>插入</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> &amp;i,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i)&#123;</span><br><span class="line">        T[i=++tot].init(val,rand()); <span class="comment">//此处rand最好手写，见下文。</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> f = T[i].v &gt; val;</span><br><span class="line">    Insert(T[i].s[!f],val);</span><br><span class="line">    <span class="keyword">if</span>(T[T[i].s[!f]].pri &gt; T[i].pri) Rot(i,f);</span><br><span class="line">    <span class="keyword">else</span>                             Update(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述代码可以手画一棵<code>depth&lt;=3</code>的满二叉树模拟一下，较易理解，此处不多解释。</p>
+<p>关于<code>rand</code>函数，用过pascal的同学都知道pascal的随机性能较好，noip考场对拍也一般选择用pascal出随机数据。treap是一种高效的平衡树，为了不让c++的内置rand影响性能，尤其当treap被卡常数时，我们可以手写rand:<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[treap学习总结]( https://www.cnblogs.com/fengzhiyuan/articles/7994428.html)
+">[3]</span></a></sup></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">rand</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> seed = <span class="number">2333</span>; <span class="comment">//seed为随机数种子，可以修改</span></span><br><span class="line">    <span class="keyword">return</span> seed = (<span class="keyword">int</span>)((((seed ^ <span class="number">998244353</span>) + <span class="number">19260817l</span>l) * <span class="number">19890604l</span>l) % <span class="number">1000000007</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="删除-1"><a href="#删除-1" class="headerlink" title="删除"></a>删除</h4><ul>
+<li>先找到要删除的节点的位置.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Treap详细介绍](https://www.cnblogs.com/BCOI/p/9072444.html)
+">[1]</span></a></sup></li>
+<li>如果这个节点位置上有多个相同的数,则直接cnt–.</li>
+<li>如果只有一个儿子或者没有儿子,直接将那个儿子接到这个节点下面(或将儿子赋值为0).</li>
+<li>如果有两个儿子,现将随机值小的那个旋到这个位置,将根旋下去,然后将旋之后的情况转化为前几种情况递归判断.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Del</span><span class="params">(<span class="keyword">int</span> &amp;i,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T[i].v==v)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!L(i)||!R(i))&#123;<span class="comment">//如果只有0~1棵子树</span></span><br><span class="line">            <span class="keyword">if</span>((!L(i))&amp;&amp;(!R(i)))&#123;<span class="comment">//如果是0棵子树</span></span><br><span class="line">                T[i].size = <span class="number">0</span>;</span><br><span class="line">                i = <span class="number">0</span>;<span class="keyword">return</span>;</span><br><span class="line">            &#125;<span class="comment">//如果是1棵子树</span></span><br><span class="line">            <span class="keyword">if</span>(!T[i].s[<span class="number">0</span>]) i = T[i].s[<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">else</span>           i = T[i].s[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;<span class="comment">//将优先级较大的旋转上来</span></span><br><span class="line">            <span class="keyword">int</span> f = T[L(i)].pri &gt; T[R(i)].pri;</span><br><span class="line">            Rot(i,f);</span><br><span class="line">            Del(T[i].s[f],v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span> Del(T[i].s[v&gt;T[i].v],v);</span><br><span class="line">    Update(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Another solution:<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Treap详细介绍](https://www.cnblogs.com/BCOI/p/9072444.html)
+">[1]</span></a></sup></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delet</span><span class="params">(<span class="keyword">int</span> &amp;x, <span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!x) <span class="keyword">return</span>;<span class="comment">//防止越界</span></span><br><span class="line">    <span class="keyword">if</span>(t[x].val == val)&#123;</span><br><span class="line">        <span class="keyword">if</span>(t[x].cnt &gt; <span class="number">1</span>)&#123;t[x].cnt--, t[x].size--;<span class="keyword">return</span>;&#125;<span class="comment">//有相同的就直接cnt--</span></span><br><span class="line">        <span class="keyword">bool</span> d = t[ls].rd &gt; t[rs].rd;</span><br><span class="line">        <span class="keyword">if</span>(ls == <span class="number">0</span> || rs == <span class="number">0</span>) x = ls+rs;<span class="comment">//只有一个儿子就直接把那个儿子放到这个位置</span></span><br><span class="line">        <span class="keyword">else</span> rotate(x, d), delet(x, val);<span class="comment">//否则将x旋下去,找一个随机值小的替代,直到回到1,2种情况</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> t[x].size--, delet(t[x].ch[t[x].val&lt;val], val);<span class="comment">//递归找到要删除的节点.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="查排名"><a href="#查排名" class="headerlink" title="查排名"></a>查排名</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ranks</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(T[i].v &gt;= v) <span class="keyword">return</span> ranks(L(i),v);</span><br><span class="line">    <span class="keyword">else</span>            <span class="keyword">return</span> T[L(i)].size + <span class="number">1</span> + ranks(R(i),v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="查前驱后继"><a href="#查前驱后继" class="headerlink" title="查前驱后继"></a>查前驱后继</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">prev</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i) <span class="keyword">return</span> -inf;</span><br><span class="line">    <span class="keyword">if</span>(T[i].v &lt; v) <span class="keyword">return</span> max(T[i].v,prev(R(i),v));</span><br><span class="line">    <span class="keyword">else</span>           <span class="keyword">return</span> prev(L(i),v);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">succ</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i) <span class="keyword">return</span> inf;</span><br><span class="line">    <span class="keyword">if</span>(T[i].v&gt; v) <span class="keyword">return</span> min(T[i].v,succ(L(i),v));</span><br><span class="line">    <span class="keyword">else</span>          <span class="keyword">return</span> succ(R(i),v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="查找第k小数"><a href="#查找第k小数" class="headerlink" title="查找第k小数"></a>查找第k小数</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Rank</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> kth)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T[L(i)].size + <span class="number">1</span> == kth) <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(T[L(i)].size &gt;=kth) <span class="keyword">return</span> Rank(L(i),kth);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> Rank(R(i),kth - T[L(i)].size - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="例题讲解"><a href="#例题讲解" class="headerlink" title="例题讲解"></a>例题讲解</h4><h5 id="POJ1442-Black-Box"><a href="#POJ1442-Black-Box" class="headerlink" title="POJ1442 Black Box "></a><a href="http://poj.org/problem?id=1442" target="_blank" rel="noopener">POJ1442 Black Box </a></h5><ul>
+<li><p>题意：有一个数列，初始为空，和一个index，初始是0。给出两种操作，第一种是往数列中添加一个数，第二种是将i++，再查询数列中第i小的数是多少。(操作数&lt;=3w)</p>
+</li>
+<li><p>做法： 裸平衡树。</p>
+</li>
+<li><p>代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100100</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> L(i) (T[i].s[0])</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> R(i) (T[i].s[1])</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">treap</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> size,s[<span class="number">2</span>],v,pri;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Sets</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">        size = <span class="number">1</span>;v = x;pri = y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;T[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m,A[N],size,Lim,now,level = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> tot,root;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> ch = getchar(); <span class="keyword">int</span> num = <span class="number">0</span> , q = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;<span class="string">'9'</span>||ch&lt;<span class="string">'0'</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">'-'</span>) q = <span class="number">-1</span>;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)&#123;</span><br><span class="line">        num = num * <span class="number">10</span> + ch - <span class="string">'0'</span>;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> num * q;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    T[i].size = T[L(i)].size + T[R(i)].size + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Rot</span><span class="params">(<span class="keyword">int</span> &amp;y,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = T[y].s[!f];</span><br><span class="line">    T[y].s[!f] = T[x].s[f];</span><br><span class="line">    T[x].s[f]  = y;</span><br><span class="line">    Update(y);Update(x);</span><br><span class="line">    y = x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> &amp;i,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i)&#123;</span><br><span class="line">        T[i=++tot].Sets(val,rand());</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> f = T[i].v &gt; val;</span><br><span class="line">    Insert(T[i].s[!f],val);</span><br><span class="line">    <span class="keyword">if</span>(T[T[i].s[!f]].pri &gt; T[i].pri) Rot(i,f);</span><br><span class="line">    <span class="keyword">else</span>                             Update(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Rank</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> kth)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T[L(i)].size + <span class="number">1</span> == kth) <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(T[L(i)].size &gt;=kth) <span class="keyword">return</span> Rank(L(i),kth);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> Rank(R(i),kth - T[L(i)].size - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    srand(time(<span class="literal">NULL</span>));</span><br><span class="line">    n = read(); m = read();</span><br><span class="line">    For(i,n) A[i] = read();</span><br><span class="line">    For(i,m) &#123;</span><br><span class="line">        Lim = read();</span><br><span class="line">        Rep(i,now+<span class="number">1</span>,Lim) Insert(root,A[i]); now = Lim;</span><br><span class="line">        level++;<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,T[Rank(root,level)].v);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="POJ2299-Ultra-QuickSort"><a href="#POJ2299-Ultra-QuickSort" class="headerlink" title="POJ2299 Ultra-QuickSort "></a><a href="http://poj.org/problem?id=2299" target="_blank" rel="noopener">POJ2299 Ultra-QuickSort </a></h5><ul>
+<li><p>题意：给出长度为$n(n&lt;50000)$的数列,求出该数列的逆序对数。</p>
+</li>
+<li><p>做法：动态插入数字，每次插入数字后得到数字的当前排名，当前总数-当前排名即为该数产生的逆序对数。</p>
+</li>
+<li><p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">500010</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Ch1 (T[i].s[0])</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Ch2 (T[i].s[1])</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;<span class="string">'9'</span>||ch&lt;<span class="string">'0'</span>) ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)&#123;</span><br><span class="line">        num=num*<span class="number">10</span>+ch-<span class="string">'0'</span>;</span><br><span class="line">        ch=getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    v=num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">treap</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> v,size,pri;</span><br><span class="line">    <span class="keyword">int</span> s[<span class="number">2</span>];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Sets</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;v=x;pri=y;size=<span class="number">1</span>;&#125;</span><br><span class="line">&#125;T[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,x,cnt,root;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    T[i].size=T[Ch1].size+T[Ch2].size+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Rot</span><span class="params">(<span class="keyword">int</span> &amp;y,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=T[y].s[!f];</span><br><span class="line">    T[y].s[!f]=T[x].s[f];</span><br><span class="line">    T[x].s[f]=y;</span><br><span class="line">    Update(y);Update(x);</span><br><span class="line">    y=x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> &amp;i,<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i)&#123;</span><br><span class="line">        T[i=++cnt].Sets(x,rand());</span><br><span class="line">        T[i].s[<span class="number">0</span>]=T[i].s[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> f=T[i].v&gt;x;</span><br><span class="line">    Insert(T[i].s[!f],x);</span><br><span class="line">    <span class="keyword">if</span>(T[T[i].s[!f]].pri&gt;T[i].pri) Rot(i,f);</span><br><span class="line">    <span class="keyword">else</span>                           Update(i);    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T[i].v==x) <span class="keyword">return</span> T[Ch1].size+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(T[i].v&lt;x) <span class="keyword">return</span> T[Ch1].size+<span class="number">1</span>+find(Ch2,x);</span><br><span class="line">    <span class="keyword">if</span>(T[i].v&gt;x) <span class="keyword">return</span> find(Ch1,x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(read(n),n)&#123;</span><br><span class="line">        ans=<span class="number">0</span>;</span><br><span class="line">        cnt=root=<span class="number">0</span>;</span><br><span class="line">        For(i,n)&#123;</span><br><span class="line">            read(x);</span><br><span class="line">            Insert(root,x);     </span><br><span class="line">            ans+=i-(find(root,x));         </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="BZOJ3196-TYVJ1730-二逼平衡树"><a href="#BZOJ3196-TYVJ1730-二逼平衡树" class="headerlink" title="BZOJ3196(TYVJ1730)二逼平衡树"></a><a href="https://www.cnblogs.com/zjdx1998/p/3893440.html" target="_blank" rel="noopener">BZOJ3196(TYVJ1730)二逼平衡树</a></h5><ul>
+<li><p>题意：</p>
+<blockquote>
+<p>您需要写一种数据结构（可参考题目标题），来维护一个有序数列，其中需要提供以下操作： </p>
+<p>1.查询k在区间内的排名 </p>
+<p>2.查询区间内排名为k的值 </p>
+<p>3.修改某一位值上的数值 </p>
+<p>4.查询k在区间内的前驱(前驱定义为小于x，且最大的数) </p>
+<p>5.查询k在区间内的后继(后继定义为大于x，且最小的数) </p>
+</blockquote>
+</li>
+<li><p>做法？ <a href="https://www.cnblogs.com/zjdx1998/p/3893440.html" target="_blank" rel="noopener">Code</a></p>
+</li>
+</ul>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><ol>
+<li><a href="http://poj.org/problem?id=3481" target="_blank" rel="noopener">POJ3481 Double Queue</a></li>
+<li><a href="http://poj.org/problem?id=2352" target="_blank" rel="noopener">POJ2352 Stars</a></li>
+</ol>
+<h3 id="Splay"><a href="#Splay" class="headerlink" title="Splay"></a>Splay</h3><p>可以先看一看Treap与Splay等其他平衡树的比较<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Treap与SBT, RBT, Splay比较](https://blog.csdn.net/lemonoil/article/details/71816386)
+">[2]</span></a></sup>。</p>
+<p>基本概念不再赘述，只介绍一下Splay的三种旋转。</p>
+<h4 id="旋转-1"><a href="#旋转-1" class="headerlink" title="旋转"></a>旋转</h4><ul>
+<li><p>Zig Step<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Splay 学习笔记](https://blog.csdn.net/changtao381/article/details/8936765)
+">[4]</span></a></sup></p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1349877709_4105.png" alt="Zig Step" title="">
+                </div>
+                <div class="image-caption">Zig Step</div>
+            </figure>
+<p>此处旋转同Treap。</p>
+</blockquote>
+</li>
+<li><p>Zig-Zag Step</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1349877744_7090.png" alt="Zig-Zag Step" title="">
+                </div>
+                <div class="image-caption">Zig-Zag Step</div>
+            </figure>
+<p>当p不是根节点，且x和p同为左孩子或右孩子时进行Zig-Zig操作。</p>
+<p>当x和p同为左孩子时，依次将p和x右旋；</p>
+<p>当x和p同为右孩子时，依次将p和x左旋。</p>
+</blockquote>
+</li>
+<li><p>Zig-Zig Step</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1349877779_5253.png" alt="Zig-Zig Step" title="">
+                </div>
+                <div class="image-caption">Zig-Zig Step</div>
+            </figure>
+<p>当p不是根节点，且x和p不同为左孩子或右孩子时，进行Zig-Zag操作。</p>
+<p>当p为左孩子，x为右孩子时，将x左旋后再右旋。</p>
+<p>当p为右孩子，x为左孩子时，将x右旋后再左旋。</p>
+</blockquote>
+</li>
+</ul>
+<p>可以发现，所有情况都可以归结为上面三种旋转。</p>
+<p>通过深度为3的二叉树模拟，可以总结出下述写法:<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Splay伸展树](https://blog.csdn.net/qq_30974369/article/details/77587168)
+">[5]</span></a></sup></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fa(i) (T[i].p)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Loc(i) (T[fa(i)].s[1]==i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Sets(P,i,tp) &#123;T[P].s[tp]=i; fa(i)=P;&#125; </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Rot</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = i , y = fa(x) , z = fa(y);</span><br><span class="line">    <span class="keyword">int</span> lx = Loc(x) , ly = Loc(y) , lz = Loc(z);</span><br><span class="line">    Sets(y,T[x].s[!lx],lx);</span><br><span class="line">    Sets(z,i,ly);</span><br><span class="line">    Sets(i,y,!lx);</span><br><span class="line">    T[y].cnt[lx] = T[x].cnt[!lx];</span><br><span class="line">    T[x].cnt[!lx] = T[y].cnt[<span class="number">0</span>] + T[y].cnt[<span class="number">1</span>] + T[y].num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Splay</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> goal)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(;fa(i)!=goal;)&#123;</span><br><span class="line">        <span class="keyword">if</span>(fa(fa(i))!=goal) Rot(fa(i));</span><br><span class="line">        Rot(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!goal) root = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h4><blockquote>
+<p>Splay Tree可以方便的解决一些区间问题，根据不同形状二叉树先序遍历结果不变的特性，可以将区间按顺序建二叉查找树。</p>
+<p>每次自下而上的一套splay都可以将x移动到根节点的位置，利用这个特性，可以方便的利用Lazy的思想进行区间操作。</p>
+<p>对于每个节点记录size，代表子树中节点的数目，这样就可以很方便地查找区间中的第k小或第k大元素。</p>
+<p><u>对于一段要处理的区间[x, y]，首先splay x-1到root，再splay y+1到root的右孩子，这时root的右孩子的左孩子对应子树就是整个区间。</u></p>
+<p>这样，大部分区间问题都可以很方便的解决，操作同样也适用于一个或多个条目的添加或删除，和区间的移动。</p>
+</blockquote>
+<p>再推荐一篇文章: <a href="https://blog.csdn.net/changtao381/article/details/8936765" target="_blank" rel="noopener">Splay Tree</a></p>
+<h4 id="例题讲解-1"><a href="#例题讲解-1" class="headerlink" title="例题讲解"></a>例题讲解</h4><h5 id="郁闷的出纳员"><a href="#郁闷的出纳员" class="headerlink" title="郁闷的出纳员"></a><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1503" target="_blank" rel="noopener">郁闷的出纳员</a></h5><p>题意：</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1503_1.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure> 
+</blockquote>
+<p>做法：我们已经学过了treap,那么这题采用treap是否可行？</p>
+<p>答案当然是可行的^_^, 觉得不可行的面壁思过去。而且这题也没有用splay的必要。splay只在处理区间问题时有独特优势，其余情况下因为其编程复杂度不低，常数较大，故大部分oier优先采用treap。本题是个裸的splay，对整体打lazy标记即可，但要注意一个坑点是如果初始工资就已经低于工资下届，这个员工是不用考虑Insert的。</p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fa(i) (T[i].p)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Loc(i) (T[fa(i)].s[1]==i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Sets(P,i,tp) &#123;T[P].s[tp]=i; fa(i)=P;&#125; </span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tnode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> p,s[<span class="number">2</span>],v,num,cnt[<span class="number">2</span>];</span><br><span class="line">&#125;T[<span class="number">100100</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,Lim,mark,num,Left,root,tot;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Rot</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = i , y = fa(x) , z = fa(y);</span><br><span class="line">    <span class="keyword">int</span> lx = Loc(x) , ly = Loc(y) , lz = Loc(z);</span><br><span class="line">    Sets(y,T[x].s[!lx],lx);</span><br><span class="line">    Sets(z,i,ly);</span><br><span class="line">    Sets(i,y,!lx);</span><br><span class="line">    T[y].cnt[lx] = T[x].cnt[!lx];</span><br><span class="line">    T[x].cnt[!lx] = T[y].cnt[<span class="number">0</span>] + T[y].cnt[<span class="number">1</span>] + T[y].num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Splay</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> goal)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(;fa(i)!=goal;)&#123;</span><br><span class="line">        <span class="keyword">if</span>(fa(fa(i))!=goal) Rot(fa(i));</span><br><span class="line">        Rot(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!goal) root = i;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> V,<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i)&#123;</span><br><span class="line">        root=++tot;</span><br><span class="line">        T[tot].v = V;T[tot].p = <span class="number">0</span>;T[tot].num = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(T[i].v==V) T[i].num++;    </span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        T[i].cnt[V&gt;T[i].v]++;</span><br><span class="line">        <span class="keyword">if</span>(!T[i].s[V&gt;T[i].v])&#123;</span><br><span class="line">            T[i].s[V&gt;T[i].v]=++tot;</span><br><span class="line">            T[tot].v = V;T[tot].p = i;T[tot].num = <span class="number">1</span>;</span><br><span class="line">            Splay(tot,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> Insert(V,T[i].s[V&gt;T[i].v]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">rank</span><span class="params">(<span class="keyword">int</span> kth,<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i) <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">if</span>(T[i].cnt[<span class="number">1</span>]&lt;kth&amp;&amp;T[i].cnt[<span class="number">1</span>] + T[i].num &gt;= kth) <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(kth&lt;T[i].cnt[<span class="number">1</span>]+T[i].num)  <span class="keyword">return</span> rank(kth,T[i].s[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">else</span>                               <span class="keyword">return</span> rank(kth-T[i].cnt[<span class="number">1</span>]-T[i].num,T[i].s[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Prev</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> Next = T[i].s[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">while</span>(T[Next].s[<span class="number">1</span>]) Next = T[Next].s[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> Next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Delete</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    Left+=T[i].num;</span><br><span class="line">    Splay(i,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span>(T[i].s[<span class="number">0</span>])&#123;</span><br><span class="line">        Splay(Prev(i),i);</span><br><span class="line">        Sets(T[i].s[<span class="number">0</span>],T[i].s[<span class="number">1</span>],<span class="number">1</span>);</span><br><span class="line">        fa(T[i].s[<span class="number">0</span>]) = <span class="number">0</span>;</span><br><span class="line">        root = T[i].s[<span class="number">0</span>];</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(T[i].s[<span class="number">1</span>])&#123;root=T[i].s[<span class="number">1</span>];fa(T[i].s[<span class="number">1</span>]) = <span class="number">0</span>;&#125;</span><br><span class="line">        <span class="keyword">else</span>          root = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    T[i].cnt[<span class="number">0</span>] = T[i].cnt[<span class="number">1</span>] = T[i].num = T[i].s[<span class="number">0</span>] = T[i].s[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;Lim);</span><br><span class="line">    For(i,n)&#123;<span class="keyword">char</span> op;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"\n%c %d"</span>,&amp;op,&amp;num);</span><br><span class="line">        T[<span class="number">0</span>].v = -mark - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">'I'</span>) </span><br><span class="line">          <span class="keyword">if</span>(num&gt;=Lim)  Insert(num-mark,root);</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">'A'</span>)     mark+=num;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">'F'</span>)     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,T[rank(num,root)].v+mark);</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">'S'</span>)&#123;</span><br><span class="line">            mark-=num;</span><br><span class="line">            Rep(j,<span class="number">1</span>,tot)</span><br><span class="line">              <span class="keyword">if</span>(T[j].num&gt;<span class="number">0</span>&amp;&amp;T[j].v+mark&lt;Lim) Delete(j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,Left);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="tyvj1729文艺平衡树"><a href="#tyvj1729文艺平衡树" class="headerlink" title="tyvj1729文艺平衡树"></a><a href="http://tyvj.cn/Problem_Show.aspx?id=1729" target="_blank" rel="noopener">tyvj1729文艺平衡树</a></h5><p>(这个OJ貌似已经改版了，现在的名字叫Joy OI, 你们可以自己搜一下)</p>
+<p>题意：</p>
+<blockquote>
+<p>您需要写一种数据结构（可参考题目标题），来维护一个有序数列，其中需要提供以下操作： 翻转一个区间，例如原有序序列是5 4 3 2 1，翻转区间是[2,4]的话，结果是5 2 3 4 1 </p>
+</blockquote>
+<p>做法：我们已经学过了treap, 那么这题采用treap是否可行呢？</p>
+<p>Splay对区间的操作、lazy标记。 我刚学的时候一直没懂这个splay的操作，对区间[a,b]的操作，首先把a-1splay到树根，然后再把b+1旋转到树根的右子树。这个很好理解，但是我一开始写的是直接T[i].s[v&gt;T[i].v]访问，一直不对，一直很纳闷，后来模拟了一下，才发现真正有效的是splay的排名，lazy标记下传后，左右子树被交换，但默认的排名未变。即第i号元素不一定就是i。 </p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fa(i) (T[i].p)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Ch1 (T[i].s[0])</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Ch2 (T[i].s[1])</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Loc(i) (T[fa(i)].s[1]==i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Sets(a,b,c) &#123;T[a].s[c] = b;fa(b) = a;&#125;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tnode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> s[<span class="number">2</span>],size,p,V,flag;</span><br><span class="line">&#125;T[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> ttot,l,r,n,m,root;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pushdown</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T[i].flag)&#123;</span><br><span class="line">        <span class="keyword">if</span>(Ch1) T[Ch1].flag ^= <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(Ch2) T[Ch2].flag ^= <span class="number">1</span>;</span><br><span class="line">        swap(Ch1,Ch2);</span><br><span class="line">        T[i].flag = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> p,<span class="keyword">int</span> &amp;i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> m = ( l + r ) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    T[i=++ttot].V = m;</span><br><span class="line">    T[i].p = p; T[i].size = <span class="number">1</span>;</span><br><span class="line">    Build(l,m<span class="number">-1</span>,i,Ch1);</span><br><span class="line">    Build(m+<span class="number">1</span>,r,i,Ch2);</span><br><span class="line">    T[i].size = T[Ch1].size + T[Ch2].size + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Rot</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> y = fa(x) , z = fa(y);</span><br><span class="line">    Pushdown(y);Pushdown(x);</span><br><span class="line">    <span class="keyword">int</span> lx = Loc(x) , ly = Loc(y);</span><br><span class="line">    Sets(y,T[x].s[!lx],lx);</span><br><span class="line">    Sets(z,x,ly);</span><br><span class="line">    Sets(x,y,!lx);</span><br><span class="line">    T[y].size = T[T[y].s[<span class="number">0</span>]].size + T[T[y].s[<span class="number">1</span>]].size + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Splay</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> goal)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(fa(i)!=goal)&#123;</span><br><span class="line">        <span class="keyword">if</span>(fa(fa(i))!=goal) Rot(fa(i));</span><br><span class="line">        Rot(i);</span><br><span class="line">    &#125;</span><br><span class="line">    T[i].size = T[Ch1].size + T[Ch2].size + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(!goal) root = i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> rank)</span></span>&#123;</span><br><span class="line">    Pushdown(i);</span><br><span class="line">    <span class="keyword">if</span>(T[Ch1].size + <span class="number">1</span> == rank) <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(T[Ch1].size&gt;= rank) <span class="keyword">return</span> Find(Ch1,rank);</span><br><span class="line">    <span class="keyword">else</span>                        <span class="keyword">return</span> Find(Ch2,rank-T[Ch1].size<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">OUT</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> rank)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!i) <span class="keyword">return</span>;</span><br><span class="line">    Pushdown(i);</span><br><span class="line">    OUT(Ch1,rank);</span><br><span class="line">    rank+=T[Ch1].size+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>((rank!=<span class="number">1</span>)&amp;&amp;(rank!=n+<span class="number">2</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(rank==n+<span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,T[i].V);</span><br><span class="line">        <span class="keyword">else</span>          <span class="built_in">printf</span>(<span class="string">"%d "</span>,T[i].V);</span><br><span class="line">    &#125;</span><br><span class="line">    OUT(Ch2,rank);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    Build(<span class="number">0</span>,n+<span class="number">1</span>,<span class="number">0</span>,root);</span><br><span class="line">    For(i,m)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;l,&amp;r);</span><br><span class="line">        Splay(Find(root,l),<span class="number">0</span>);</span><br><span class="line">        Splay(Find(root,r+<span class="number">2</span>),root);</span><br><span class="line">        T[T[T[root].s[<span class="number">1</span>]].s[<span class="number">0</span>]].flag ^= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    OUT(root,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h4><ol>
+<li><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1208" target="_blank" rel="noopener">HNOI2004宠物收养所</a></li>
+<li><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1588" target="_blank" rel="noopener">HNOI2002营业额统计</a></li>
+<li><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1058" target="_blank" rel="noopener">ZJOI2007报表统计</a></li>
+<li><a href="https://www.cnblogs.com/zjdx1998/p/3862572.html" target="_blank" rel="noopener">BZOJ1251序列终结者</a></li>
+<li><a href="https://www.cnblogs.com/zjdx1998/p/3866606.html" target="_blank" rel="noopener">SCOI2013多项式运算</a></li>
+<li><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1269" target="_blank" rel="noopener">AHOI2006文本编辑器</a></li>
+<li><a href="http://poj.org/problem?id=3580" target="_blank" rel="noopener">POJ3580 SuperMemo</a>（必做)</li>
+</ol>
+<p>treap和splay的练习题和例题都是以前我做过的题目,虽然年代久远但是比较经典。</p>
+<p>另外，平衡树的实用性其实不高，已经逐渐淡出算法竞赛的舞台，通过例题和练习题所标出的年份也不难发现这一点。</p>
+<p>平衡树淡出除了过于模板、实用性不高以外，还有另外一个原因，就是C++的STL里封装了RBT(红黑树)，大家可以多多学习STL的内容。</p>
+<h3 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h3><p>STL网上教程、文章较多，此处不多赘述。</p>
+<p>给出如下建议：掌握&gt;熟悉&gt;了解</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">vector、map、set</td>
+<td style="text-align:center">掌握</td>
+</tr>
+<tr>
+<td style="text-align:center">upper_bound、lower_bound</td>
+<td style="text-align:center">掌握</td>
+</tr>
+<tr>
+<td style="text-align:center">list、stack、deque</td>
+<td style="text-align:center">了解</td>
+</tr>
+<tr>
+<td style="text-align:center">multimap、multiset</td>
+<td style="text-align:center">熟悉</td>
+</tr>
+<tr>
+<td style="text-align:center">queue、priority_queue</td>
+<td style="text-align:center">掌握</td>
+</tr>
+</tbody>
+</table>
+<p>熟练使用迭代器(iterator)，掌握upper_bound，lower_bound等常用方法，熟悉unique等方法。</p>
+<h2 id="LCA"><a href="#LCA" class="headerlink" title="LCA"></a><center>LCA</center></h2><p>LCA(Least Common Ancestors)问题是指给定一棵树T和两个节点u和v，找出u和v的离根节点最远的公共祖先。 </p>
+<p>以下图为例，求(3,12) , (14,4) , (7,9)的LCA。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1209138-20170729151024207-1541824194.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure> 
+<h3 id="Tarjan算法"><a href="#Tarjan算法" class="headerlink" title="Tarjan算法"></a>Tarjan算法</h3><p>​    LCA的Tarjan算法的时间复杂度为$O(n+q)$，是一种离线算法，要用到并查集。</p>
+<p>　　Tarjan算法基于dfs，在dfs的过程中，对于每个节点位置的询问做出相应的回答。</p>
+<p>　　dfs的过程中，当一棵子树被搜索完成之后，就把他和他的父亲合并成同一集合；在搜索当前子树节点的询问时，如果该询问的另一个节点已经被访问过，那么该编号的询问是被标记了的，于是直接输出当前状态下，另一个节点所在的并查集的祖先；如果另一个节点还没有被访问过，那么就做下标记，继续dfs。</p>
+<h4 id="例题讲解-2"><a href="#例题讲解-2" class="headerlink" title="例题讲解"></a>例题讲解</h4><h5 id="POJ-1330-Nearest-Common-Ancestors"><a href="#POJ-1330-Nearest-Common-Ancestors" class="headerlink" title="POJ 1330 Nearest Common Ancestors"></a><a href="http://poj.org/problem?id=1330" target="_blank" rel="noopener">POJ 1330 Nearest Common Ancestors</a></h5><p>题意：给出一棵树，($n&lt;=10000$)，询问两点间的LCA。</p>
+<p>直接上代码，结合代码理解一下流程。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">10010</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> GetRoot rep(i,n)<span class="meta-keyword">if</span>(!indeg[i])&#123;root = i;break;&#125;</span></span><br><span class="line"><span class="keyword">int</span> u,v,n,head[N],indeg[N],root,ans;</span><br><span class="line"><span class="keyword">int</span> fa[N];<span class="keyword">bool</span> vis[N];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> es;</span><br><span class="line">    <span class="keyword">int</span> t,next;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> s,<span class="keyword">int</span> t)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;t = t; next=head[s];head[s]=es++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>&#123;</span><br><span class="line">        es=<span class="number">0</span>;</span><br><span class="line">        <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">        <span class="built_in">memset</span>(indeg,<span class="number">0</span>,<span class="keyword">sizeof</span>(indeg));</span><br><span class="line">        <span class="built_in">memset</span>(head,<span class="number">-1</span>,<span class="keyword">sizeof</span>(head));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;e[N];</span><br><span class="line"><span class="keyword">int</span> edge::es = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (fa[i]==i)?(i):(fa[i]=find(fa[i]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Tarjan</span><span class="params">(<span class="keyword">int</span> rt)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ans) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[rt];i+<span class="number">1</span>;i=e[i].next)&#123;</span><br><span class="line">        Tarjan(e[i].t);</span><br><span class="line">        fa[find(e[i].t)]=rt;</span><br><span class="line">    &#125;</span><br><span class="line">    vis[rt]=<span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt==u &amp;&amp; vis[v]) ans = find(v);</span><br><span class="line">    <span class="keyword">if</span>(rt==v &amp;&amp; vis[u]) ans = find(u);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;_);</span><br><span class="line">    <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        ans=<span class="number">0</span>;edge::clear();</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);fa[n]=n;</span><br><span class="line">        rep(i,n<span class="number">-1</span>)&#123;</span><br><span class="line">            fa[i]=i;<span class="keyword">int</span> x,y;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">            indeg[y]++;</span><br><span class="line">            e[edge::es].add(x,y);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</span><br><span class="line">        GetRoot;</span><br><span class="line">        Tarjan(root);</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="HDU2586-How-far-away"><a href="#HDU2586-How-far-away" class="headerlink" title="HDU2586 How far away ?"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2586" target="_blank" rel="noopener">HDU2586 How far away ?</a></h5><p>题意：给出一棵树，($n&lt;=40000$)，每条边均有权值，询问两点间的最短路径。</p>
+<p>思路：树上两点间的最短路径往往要想到LCA，noip近些年也有涉及。</p>
+<p>不难发现树中两点间最短路径即是$d(u)+d(v)-2d(LCA)$,其中$d(x)$是$x$到根节点的距离。</p>
+<p>另外注意，本题中给出的虽是无向图，但是可以按有向图处理出一个根节点，方便操作。</p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">40010</span>;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fx first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fy second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> GetRoot(rt) rep(i,n)<span class="meta-keyword">if</span>(!indeg[i])&#123;rt = i;break;&#125;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> START int _;scanf(<span class="meta-string">"%d"</span>,&amp;_);while(_--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">int</span> dis[N],head[N],n,m,ans[N],fa[N],indeg[N];</span><br><span class="line"><span class="keyword">bool</span> vis[N];</span><br><span class="line"><span class="built_in">vector</span>&lt;pii&gt; q[N];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> es;</span><br><span class="line">    <span class="keyword">int</span> t,next,v;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>&#123;</span><br><span class="line">        es=<span class="number">0</span>;</span><br><span class="line">        rep(i,n) &#123;</span><br><span class="line">            fa[i]=i;</span><br><span class="line">            q[i].clear();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">memset</span>(head,<span class="number">-1</span>,<span class="keyword">sizeof</span>(head));</span><br><span class="line">        <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">        <span class="built_in">memset</span>(ans,<span class="number">0</span>,<span class="keyword">sizeof</span>(ans));</span><br><span class="line">        <span class="built_in">memset</span>(indeg,<span class="number">0</span>,<span class="keyword">sizeof</span>(indeg));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">        v=w;t=y;next=head[x];head[x]=es++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> edge::es = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> fa[k]==k?k:fa[k]=find(fa[k]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i+<span class="number">1</span>;i=e[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> v=e[i].t; </span><br><span class="line">        dis[v]=dis[u]+e[i].v;</span><br><span class="line">        dfs(v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Tarjan</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i+<span class="number">1</span>;i=e[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> v=e[i].t;</span><br><span class="line">        <span class="keyword">if</span>(vis[v]) <span class="keyword">continue</span>;</span><br><span class="line">        Tarjan(v);</span><br><span class="line">        fa[find(v)]=u;</span><br><span class="line">    &#125;</span><br><span class="line">    vis[u]=<span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;q[u].size();i++)</span><br><span class="line">        <span class="keyword">if</span>(vis[q[u][i].fx] &amp;&amp; !ans[q[u][i].fy])&#123;</span><br><span class="line">            ans[q[u][i].fy] = dis[q[u][i].fx] + dis[u] - <span class="number">2</span>*dis[find(q[u][i].fx)];</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    START&#123;<span class="keyword">int</span> rt,x,y,w;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">        edge::clear();</span><br><span class="line">        rep(i,n<span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;x,&amp;y,&amp;w);</span><br><span class="line">            e[edge::es].add(x,y,w);</span><br><span class="line">            indeg[y]++;</span><br><span class="line">        &#125;</span><br><span class="line">        rep(i,m)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">            q[x].push_back(mp(y,i));</span><br><span class="line">            q[y].push_back(mp(x,i));</span><br><span class="line">        &#125;</span><br><span class="line">        GetRoot(rt);</span><br><span class="line">        dis[rt]=<span class="number">0</span>;dfs(rt);</span><br><span class="line">        Tarjan(rt);</span><br><span class="line">        rep(i,m) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="倍增"><a href="#倍增" class="headerlink" title="倍增"></a>倍增</h3><p>倍增算法处理LCA问题非常容易理解，也不难写，在近些年的noip、NOI、冬令营都有出现，建议熟练掌握。</p>
+<p>在处理(a,b)的LCA问题时，不难想到的一种思路是将(a,b)调至同一深度，然后(a’,b’)同时上/下调，使其到达同一个顶点，这个顶点就是(a,b)的LCA。倍增算法就是基于这种思路的优化，具体优化在调整上。</p>
+<p>考虑$fa(i,j)$表示节点$i$,向上跳$2^j$个单位后到达的顶点，那么显然$fa(i,j)=fa(fa(i,j-1),j-1)$ </p>
+<p>（不显然？手动算算或者仔细想想$fa(i,j-1)$向上需要跳多少步才能到$fa(i,j)$? )</p>
+<p>按照类似的思路我们还可以维护$dis(i,j), max(i,j)$等。</p>
+<h4 id="例题讲解-3"><a href="#例题讲解-3" class="headerlink" title="例题讲解"></a>例题讲解</h4><h5 id="NOIP2013T3-货车运输"><a href="#NOIP2013T3-货车运输" class="headerlink" title="NOIP2013T3 货车运输"></a><a href="https://www.smartoj.com/p/2511" target="_blank" rel="noopener">NOIP2013T3 货车运输</a></h5><p>题意：一个可能有重边的图，给出若干个询问，求点对间路径中的最小边的最大值。</p>
+<blockquote>
+<p>对于 30%的数据，$0 &lt; n &lt; 1,000，0 &lt; m &lt; 10,000，0 &lt; q &lt; 1,000$；</p>
+<p>对于 60%的数据，$0 &lt; n &lt; 1,000，0 &lt; m &lt; 50,000，0 &lt; q &lt; 1,000$；</p>
+<p>对于 100%的数据，$0 &lt; n &lt; 10,000，0 &lt; m &lt; 50,000，0 &lt; q &lt; 30,000，0 ≤ z ≤ 100,000$。</p>
+</blockquote>
+<p>做法：其实只需对图跑一个最大生成树，暴力处理询问就可以拿60分。对于100%的询问，直接倍增LCA。 </p>
+<p>代码:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">50010</span>*<span class="number">2</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M = <span class="number">50010</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> logn 16</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(i,n) for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Down(i,r,l) for(int i=r;i&gt;=l;i--)</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> s,t,next,w;</span><br><span class="line">&#125;E[M*<span class="number">2</span>],TE[M];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> q,n,m,Es,s,t,w;</span><br><span class="line"><span class="keyword">int</span> f[N],fa[N][logn+<span class="number">20</span>],deep[N],Min[N][logn+<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> head[N];</span><br><span class="line"><span class="keyword">bool</span> vis[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">makelist</span><span class="params">(<span class="keyword">int</span> s,<span class="keyword">int</span> t,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">    E[Es].s = s;E[Es].t = t; E[Es].w = w; </span><br><span class="line">    E[Es].next = head[s];head[s] = Es++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(edge A,edge B)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> A.w &gt; B.w;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (f[i]==i)?(i):(find(f[i]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(head,<span class="number">-1</span>,<span class="keyword">sizeof</span>(head));</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);    </span><br><span class="line">    For(i,n) f[i] = i;</span><br><span class="line">    For(i,m)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;s,&amp;t,&amp;w);</span><br><span class="line">        TE[i].s = s;TE[i].t = t;TE[i].w = w;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(TE+<span class="number">1</span>,TE+m+<span class="number">1</span>,cmp);</span><br><span class="line">    For(i,m)&#123;</span><br><span class="line">        <span class="keyword">int</span> fx = find(TE[i].s) , fy = find(TE[i].t);</span><br><span class="line">        <span class="keyword">if</span>(fx!=fy) &#123;</span><br><span class="line">            f[fx] = fy;</span><br><span class="line">            makelist(TE[i].s,TE[i].t,TE[i].w);</span><br><span class="line">            makelist(TE[i].t,TE[i].s,TE[i].w);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;            </span><br><span class="line">    vis[i] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> p=head[i];p!=<span class="number">-1</span>;p=E[p].next)</span><br><span class="line">        <span class="keyword">if</span>(!vis[E[p].t])&#123;</span><br><span class="line">            <span class="keyword">int</span> v = E[p].t;fa[v][<span class="number">0</span>] = i;</span><br><span class="line">            deep[v] = deep[i] + <span class="number">1</span>;</span><br><span class="line">            Min[v][<span class="number">0</span>] = E[p].w; </span><br><span class="line">            For(j,logn)&#123;</span><br><span class="line">                fa[v][j] = fa[fa[v][j<span class="number">-1</span>]][j<span class="number">-1</span>];</span><br><span class="line">                Min[v][j] = min(Min[v][j<span class="number">-1</span>],Min[fa[v][j<span class="number">-1</span>]][j<span class="number">-1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            DFS(v);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LCA</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">2147483647</span>;<span class="keyword">if</span>(deep[u] &lt; deep[v]) swap(u,v);</span><br><span class="line">    <span class="keyword">int</span> d = deep[u] - deep[v];</span><br><span class="line">    Rep(i,<span class="number">0</span>,logn)</span><br><span class="line">        <span class="keyword">if</span>((<span class="number">1</span>&lt;&lt;i)&amp;d) &#123;ans = min(ans,Min[u][i]);u = fa[u][i];&#125;</span><br><span class="line">    <span class="keyword">if</span>(u==v) <span class="keyword">return</span> ans;</span><br><span class="line">    Down(i,logn,<span class="number">0</span>)</span><br><span class="line">      <span class="keyword">if</span>(fa[u][i]!=fa[v][i])&#123;</span><br><span class="line">          ans = min(min(Min[u][i],Min[v][i]),ans);</span><br><span class="line">          u = fa[u][i];v = fa[v][i];</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="keyword">if</span>(u!=v)&#123;</span><br><span class="line">        ans = min(ans,min(Min[u][<span class="number">0</span>],Min[v][<span class="number">0</span>]));</span><br><span class="line">        u = fa[u][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    init();</span><br><span class="line">    For(i,n)</span><br><span class="line">      <span class="keyword">if</span>(!deep[i])&#123;deep[i] = <span class="number">1</span>;DFS(i);&#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;q);</span><br><span class="line">    For(i,q)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;s,&amp;t);</span><br><span class="line">        <span class="keyword">if</span>(find(s)!=find(t)) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">else</span>                 <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,LCA(s,t));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="NOIP2015-T6-运输计划"><a href="#NOIP2015-T6-运输计划" class="headerlink" title="NOIP2015 T6 运输计划"></a><a href="http://uoj.ac/problem/150" target="_blank" rel="noopener">NOIP2015 T6 运输计划</a></h5><p>题意：给出$n(&lt;=300000)$个节点的树，和$m(&lt;=300000)$个询问点对间最短距离。要求选择一条边，使该边权值为0后，求出m个询问的最大值最小。</p>
+<p>样例：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1533147876533.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>思考：</p>
+<blockquote>
+<p>我参加了这一年的考试，没记错的话暴力+奇技淫巧应该能拿到60分？现在针对100%的数据来看。</p>
+<p>分析完题目之后发现其实就是“最大值最小”类问题，第一反应是二分。将所有询问处理出来后（怎么处理？），每次二分答案$ans$，对超出答案的询问处理，怎么处理呢?</p>
+<p>显然，对超出答案的所有询问的路径求交，交出的路径中求出最大的边$max$，以$ans-max$为二分依据即可。</p>
+<p>路径求交，采用差分（也有叫树上前缀和）：在树中将所有路径起、始权值+1，LCA权值-2，从所有叶节点往上累加，最终权值为路径数的点到其父亲的边为所求边。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1533149366004.png" alt="](1533149352380.png)![" title="">
+                </div>
+                <div class="image-caption">](1533149352380.png)![</div>
+            </figure>
+<p>时间复杂度：$O(mlogn+(m+n)logL) $</p>
+</blockquote>
+<h3 id="RMQ、树链剖分"><a href="#RMQ、树链剖分" class="headerlink" title="RMQ、树链剖分"></a>RMQ、树链剖分</h3><p>展开讲很费时间，还是推荐几篇文章：</p>
+<ol>
+<li><a href="https://blog.csdn.net/chenzhenyu123456/article/details/47359859" target="_blank" rel="noopener">LCA转RMQ</a></li>
+<li><a href="https://blog.csdn.net/hell2pradise/article/details/5815959" target="_blank" rel="noopener">RMQ与LCA(From TopCoder Algorithm Tutorials)</a></li>
+<li><a href="https://blog.csdn.net/wazwaztime/article/details/51416187" target="_blank" rel="noopener">树链剖分求LCA</a></li>
+<li><a href="https://www.cnblogs.com/fuyun-boy/p/6045709.html" target="_blank" rel="noopener">树剖求LCA</a></li>
+<li><a href="https://blog.csdn.net/Nightmare_ak/article/details/77164374" target="_blank" rel="noopener">树剖法</a></li>
+</ol>
+<h3 id="练习题-2"><a href="#练习题-2" class="headerlink" title="练习题"></a>练习题</h3><ol>
+<li><a href="http://poj.org/problem?id=1470" target="_blank" rel="noopener">POJ1470Closest Common Ancestors</a> </li>
+<li><a href="http://poj.org/problem?id=1986" target="_blank" rel="noopener">POJ1986Distance Queries</a> </li>
+<li>NOIp2012 疫情控制</li>
+</ol>
+<h2 id="DP优化"><a href="#DP优化" class="headerlink" title="DP优化"></a><center>DP优化</center></h2><p>DP优化有很多种类型，常见的有下面四种。<sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[DP优化小结](https://blog.csdn.net/qq_35649707/article/details/77834685)
+">[6]</span></a></sup><sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[常见DP优化类型总结](https://wenku.baidu.com/view/675f3b820d22590102020740be1e650e52eacff0.html)
+">[7]</span></a></sup></p>
+<h3 id="数据结构优化"><a href="#数据结构优化" class="headerlink" title="数据结构优化"></a>数据结构优化</h3><h4 id="线段树、树状数组"><a href="#线段树、树状数组" class="headerlink" title="线段树、树状数组"></a>线段树、树状数组</h4><p>这类问题的状态方程一般都不是很难，往往分析之后都能得出常见的如LIS（最长上升子序列）等模型。</p>
+<h5 id="NOIP2013T5-花匠"><a href="#NOIP2013T5-花匠" class="headerlink" title="NOIP2013T5 花匠"></a><a href="https://www.luogu.org/problemnew/show/P1970" target="_blank" rel="noopener">NOIP2013T5 花匠</a></h5><blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1533188420861.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>其实是个很简单的dp，设$f[i][j]$表示前i位其中第$i$位状态为$j$的方案数，$j=0,1$分别代表低和高，那么</p>
+<p>$f[i][j]=max{f[k][j\text{^}1]}+1$,其中$h[i],h[k]$需要满足相应的条件。</p>
+<p>对$j$分类讨论，如当$j=0$时,$f[i][0]=max{f[j][1]} + 1 , h[j]&gt;h[i]$，那么只需对$h$建树，在$h[i]\text{~}\infty$找最大值即可。</p>
+</blockquote>
+<h4 id="单调栈、单调队列"><a href="#单调栈、单调队列" class="headerlink" title="单调栈、单调队列"></a>单调栈、单调队列</h4><p>这类问题的核心是单调，考虑$f[i]=min{f[j]+w[i]}$，如果$w[i]$单调增，则只需用递减的单调队列维护$f[j]$即可。</p>
+<h5 id="Vijos1243生产商品-8"><a href="#Vijos1243生产商品-8" class="headerlink" title="Vijos1243生产商品[8]"></a><a href="https://vijos.org/p/1243" target="_blank" rel="noopener">Vijos1243生产商品</a><sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[单调队列优化dp例题](http://www.cnblogs.com/Zars19/p/7163367.html)">[8]</span></a></sup></h5><p>题意：有$n$个任务，$m$个机器，每个机器完成每个任务都有特定的时间，任务必须依次完成，且一个机器只能连续完成$l$个任务，每次更换机器需要时间$k$，求完成所有任务的最短时间。($n&lt;=100000,m&lt;=5$)</p>
+<p>分析：首先预处理$s[i][j]$为第$i$个机器完成前$j$个任务所需要的时间,$f[i][j]$为完成前$i$个任务且第$i$个任务为$j$号机器完成的时间，那么有如下的转移方程</p>
+<p>$f[i][j] = min{f[k][p] +s[j][i]-s[j][k]} , i-l&lt;=k&lt;i$,显然，这样做的时间复杂度是$O(nm^2l)$,但是将式子变形成$f[i][j] = min{f[k][p] -s[j][k]} +s[j][i] , i-l&lt;=k&lt;i$, 就不难发现了单调性，此时可以用单调队列维护，复杂度变成了$O(nm^2)$。</p>
+<p>单调栈其实和单调队列类似，都是分析单调性。具体可以做做练习题6。</p>
+<h3 id="斜率优化"><a href="#斜率优化" class="headerlink" title="斜率优化"></a>斜率优化</h3><p>对于$f[i]=min{f[j] + (x[i]-x[j])^2}$形转移方程，将其展开后得到$f[i]=min{f[j]+x[j]^2+x[i]^2-2 x[i]x[j]}$,显然，如果没有最后的交叉项，可以用单调队列维护。现在有了这个交叉项，我们可以考虑斜率优化。</p>
+<h4 id="HDU3507Print-Article"><a href="#HDU3507Print-Article" class="headerlink" title="HDU3507Print Article"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3507" target="_blank" rel="noopener">HDU3507Print Article</a></h4><p>该题的转移方程其实就是$f[i]=min{f[j]+x[j]^2+x[i]^2-2 x[i]x[j]+m}$,和上式基本相同。考虑$k&lt;j&lt;i$, 且用$j$更新比用$k$更新好。则有$f[j]+(x[i]-x[j])^2+m &lt; f[k]+(x[i]-x[k])^2 +m$,移项化简得 $\frac{(f[j]+x[j]^2)-(f[k]+x[k]^2)}{x[j]-x[k]}&lt;2 x[i]$，此时令$Y[j]=(f[j])+x[j]^2) , Y[k]=(f[k]+x[k]^2) , X[i]=x[i] , F[i]=2 x[i]$, 则上式变为$\frac{Y[j]-Y[k]}{X[j]-X[k]}&lt;F[i]$,该式就是最经典的斜率式，换言之，只要满足上式，选$j$一定比选$k$优。其实化简得核心就是利用单调队列维护斜率。</p>
+<h3 id="四边形优化"><a href="#四边形优化" class="headerlink" title="四边形优化"></a>四边形优化</h3><p>推荐文章：<a href="https://blog.csdn.net/noiau/article/details/72514812" target="_blank" rel="noopener">四边形不等式优化讲解（详解）</a></p>
+<h3 id="矩阵加速"><a href="#矩阵加速" class="headerlink" title="矩阵加速"></a>矩阵加速</h3><p>大家对斐波那契数列一定都非常熟悉，$f(n)=f(n-1)+f(n-2)$，显然对于$n&lt;=1e8$是可以轻松处理的，但是如果当n非常大，比如$n&gt;1000000000$，如何处理呢？ </p>
+<p>引入矩阵：$$M =  \begin{bmatrix} 0&amp; 1  \newline 1 &amp; 1  \end{bmatrix} ，f_n=\begin{bmatrix} f(n-1)\newline f(n)\end{bmatrix} ,f_{n+1} = \begin{bmatrix}f(n) \newline f(n+1)\end{bmatrix}$$,那么显然$f_{n+1}=M \cdot f_n$，换言之$f_{n+1} = M^n \cdot f_1$。我们知道普通数字的$n$次幂是可以通过快速幂求出的，矩阵也有类似的性质。所以我们可以采用矩阵快速幂的方法优化dp的转移方程。</p>
+<p>关于矩阵快速幂，可以做经典例题<a href="http://poj.org/problem?id=3233" target="_blank" rel="noopener">POJ3233 Matrix Power Series</a></p>
+<h4 id="例题讲解-4"><a href="#例题讲解-4" class="headerlink" title="例题讲解"></a>例题讲解</h4><h5 id="HDU5950-Recursive-sequence"><a href="#HDU5950-Recursive-sequence" class="headerlink" title="HDU5950 Recursive sequence"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5950" target="_blank" rel="noopener">HDU5950 Recursive sequence</a></h5><p>题面：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1533186362463.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>这题是2016 ACM-ICPC 沈阳站的铜牌题，题目意思其实就是求$an=2a_{n-2}+a_{n-1}$.其中$n&gt;=3, a_1 = a ,a_2 =b$给出。</p>
+<p>由于$n&lt;2^{31}$，故考虑矩阵加速,构造矩阵$$M=\begin{bmatrix} 0&amp;1 \newline 2&amp;1 \end{bmatrix}$$即可。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>如状压dp、数位dp、树型dp等是特殊形式的dp，也建议大家找找例题练习掌握。</p>
+<h3 id="练习题-3"><a href="#练习题-3" class="headerlink" title="练习题"></a>练习题</h3><ol>
+<li><p>【Easy】<a href="https://www.luogu.org/problemnew/show/P1939" target="_blank" rel="noopener">矩阵加速</a></p>
+</li>
+<li><p>【Medium】<a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1009" target="_blank" rel="noopener">HNOI2008GT考试</a>(结合kmp)</p>
+</li>
+<li><p>【Medium】 <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1297" target="_blank" rel="noopener">SCOI2009迷路</a></p>
+</li>
+<li><p>【Easy】<a href="http://poj.org/problem?id=3017" target="_blank" rel="noopener">POJ3017Cut the Sequence</a>]</p>
+</li>
+<li><p>【Hard】<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1791" target="_blank" rel="noopener">BZOJ1791:Island</a> </p>
+</li>
+<li><p>【Medium】 <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1010" target="_blank" rel="noopener">HNOI2008玩具装箱toy</a></p>
+</li>
+<li><p>【合集】<a href="https://blog.csdn.net/shiyongyang/article/details/78299894?readlog" target="_blank" rel="noopener">斜率优化 入门经典</a></p>
+</li>
+<li><blockquote>
+<p>bzoj1096 [ZJOI2007]仓库建设</p>
+<p>bzoj1597 [USACP2008 Mar]土地购买 </p>
+<p>bzoj1911 [Apio2010]特别行动队 </p>
+<p>bzoj3156 防御准备 </p>
+<p>bzoj3675[Apio2014] 序列分割 </p>
+<p>bzoj3437 小P的牧场 </p>
+<p>bzoj4518 [SDOI2016] 征途</p>
+</blockquote>
+</li>
+</ol>
+<center><strong>由于本人水平有限，如有错误敬请批评指正。</strong></center>
+
+<p><center><font size="6"> 最后祝同学们在接下来的NOIp、冬令营、省选中取得好成绩！</font><center></center></center></p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/BCOI/p/9072444.html" target="_blank" rel="noopener">Treap详细介绍</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/lemonoil/article/details/71816386" target="_blank" rel="noopener">Treap与SBT, RBT, Splay比较</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/fengzhiyuan/articles/7994428.html" target="_blank" rel="noopener">treap学习总结</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/changtao381/article/details/8936765" target="_blank" rel="noopener">Splay 学习笔记</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/qq_30974369/article/details/77587168" target="_blank" rel="noopener">Splay伸展树</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/qq_35649707/article/details/77834685" target="_blank" rel="noopener">DP优化小结</a><a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://wenku.baidu.com/view/675f3b820d22590102020740be1e650e52eacff0.html" target="_blank" rel="noopener">常见DP优化类型总结</a><a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.cnblogs.com/Zars19/p/7163367.html" target="_blank" rel="noopener">单调队列优化dp例题</a><a href="#fnref:8" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-08-02T16:46:11.382Z" itemprop="dateUpdated">2018-08-03 00:46:11</time>
+</span><br>
+
+
+        
+        感谢您阅读这篇文章，如您有任何疑问，可以在下方评论，或邮件联系我！
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.zjdx1998.ml">
+            <img src="/img/avatar.jpg" alt="Jerome">
+            Jerome
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LCA/">LCA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dp/">dp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dp优化/">dp优化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/二分/">二分</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/平衡树/">平衡树</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/&title=《2018SummerHZOI讨论》 — 浙江大傻屌's Blog&pic=http://www.zjdx1998.ml/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/&title=《2018SummerHZOI讨论》 — 浙江大傻屌's Blog&source=浙江大傻屌的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2018SummerHZOI讨论》 — 浙江大傻屌's Blog&url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/&via=http://www.zjdx1998.ml" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/07/15/acmtraingningjuly/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">2018暑期ACM训练记录</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PeRp6A5RyU3g4FfBLzwRoUhJ-gzGzoHsz",
+            appKey: "jYlLQOKQP9jG5dUSrEjiBI5e",
+            avatar: "mm",
+            placeholder: "欢迎留言~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Jerome &copy; 2018</span>
+            <span>
+                
+                Power by Jerome Thanks Theme indigo
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/&title=《2018SummerHZOI讨论》 — 浙江大傻屌's Blog&pic=http://www.zjdx1998.ml/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/&title=《2018SummerHZOI讨论》 — 浙江大傻屌's Blog&source=浙江大傻屌的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2018SummerHZOI讨论》 — 浙江大傻屌's Blog&url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/&via=http://www.zjdx1998.ml" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3ay27DMAxE0fz/T7tAVgHc0DMcGa2p65Xhp44WhEjq9ZKP433U559XztfPd8/fqd9dcMCAAeOxjKM8lOHmd+tpqp+HAQPGPgw9yCaRMAnuF2OGAQMGjDJ0usvH3jdhwIABo5e41oNQFoI1DAYMGDDcJDYvtOkp7o25OAwYMB7IWNUYuOP8D/obMGDA+GeMo3XkU9BrG3x9FwYMGKMZSeG+l6zqE6QntDBgwJjN0F/Wk9s7FpoXUwkDBowNGPr2LLcBWRfXlrUwYcCAMZrhFu6TZ/Swm7Q2YcCAMY/hhlGdkVy3JwUGDBijGb0lXa/e1WsbuBs1YMCAMZXhDjQJl+5+CeVJGDBgzGboBbV6iabczd+SklgYMGAMZSSpZlImc3eFfP07DBgwNmDY+W4wCPdfzZ4GDBgwBjGSsprxAzkcN5sBMGDAGM1wQ2qyfKyHa889DBgwNmPkRfy8rKY3CX45hwEDxmiG2x7Q0079SAAwYMDYjeGWvVyAu66zi3owYMDYjKEAemmqO0R9CmDAgDGboYddd8nYS3R7xUEYMGBMZfQSzlWFNj2sX3wNBgwYoxlJl1AHuxsy9C/AgAFjH0YyIL1h4AZWO8WFAQPGBgy3ZN/bopFsAruAwYABA0arYaCXzNwtHVqXAAYMGDsy9GWf/uVbSmkwYMAYynBbj+7mMDdxtducMGDAGM1YFZR7gdVNVu0lIwwYMJ7N+AGVdWC+L8wRzwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '干嘛呢！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
