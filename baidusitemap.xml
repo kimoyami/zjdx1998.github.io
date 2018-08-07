@@ -14,13 +14,13 @@
         
         <tag>ACM</tag>
          
-        <tag>平衡树</tag>
+        <tag>dp</tag>
          
         <tag>贪心</tag>
          
         <tag>二分</tag>
          
-        <tag>dp</tag>
+        <tag>平衡树</tag>
          
         <tag>LCA</tag>
          
@@ -46,21 +46,21 @@
         
         <tag>ACM</tag>
          
-        <tag>贪心</tag>
-         
-        <tag>二分</tag>
+        <tag>数学</tag>
          
         <tag>dp</tag>
          
         <tag>模拟</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>二分</tag>
          
         <tag>树状数组</tag>
          
         <tag>Hash</tag>
          
         <tag>字符串</tag>
-         
-        <tag>数学</tag>
          
          
            
@@ -145,13 +145,13 @@
         
         <tag>ACM</tag>
          
-        <tag>dp</tag>
-         
         <tag>数学</tag>
          
         <tag>矩阵快速幂</tag>
          
         <tag>可持久化线段树</tag>
+         
+        <tag>dp</tag>
          
          
            
@@ -173,21 +173,21 @@
         
         <tag>ACM</tag>
          
-        <tag>贪心</tag>
-         
-        <tag>二分</tag>
+        <tag>数学</tag>
          
         <tag>dp</tag>
          
         <tag>模拟</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>二分</tag>
          
         <tag>树状数组</tag>
          
         <tag>Hash</tag>
          
         <tag>字符串</tag>
-         
-        <tag>数学</tag>
          
          
            
