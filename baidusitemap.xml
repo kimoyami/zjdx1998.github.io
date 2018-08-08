@@ -3,42 +3,9 @@
 
 
     
-    
-  <url>
-    <loc>http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/</loc>
-    <lastmod>2018-08-02T16:46:11.382Z</lastmod>
-    <data>
-        <display>
-        <title>2018SummerHZOI讨论</title>
-        <pubTime>2018-08-02T15:26:13.000Z</pubTime>
-        
-        <tag>ACM</tag>
-         
-        <tag>dp</tag>
-         
-        <tag>平衡树</tag>
-         
-        <tag>贪心</tag>
-         
-        <tag>二分</tag>
-         
-        <tag>LCA</tag>
-         
-        <tag>dp优化</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://www.zjdx1998.ml/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>http://www.zjdx1998.ml/2018/07/15/acmtraingningjuly/</loc>
-    <lastmod>2018-08-02T16:45:40.948Z</lastmod>
+    <lastmod>2018-08-08T02:03:33.388Z</lastmod>
     <data>
         <display>
         <title>2018暑期ACM训练记录</title>
@@ -61,6 +28,39 @@
         <tag>Hash</tag>
          
         <tag>字符串</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://www.zjdx1998.ml/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/</loc>
+    <lastmod>2018-08-02T16:46:11.382Z</lastmod>
+    <data>
+        <display>
+        <title>2018SummerHZOI讨论</title>
+        <pubTime>2018-08-02T15:26:13.000Z</pubTime>
+        
+        <tag>ACM</tag>
+         
+        <tag>dp</tag>
+         
+        <tag>平衡树</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>二分</tag>
+         
+        <tag>LCA</tag>
+         
+        <tag>dp优化</tag>
          
          
            
