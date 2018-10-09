@@ -39,13 +39,13 @@
     
       <category term="ACM" scheme="http://www.zjdx1998.ml/tags/ACM/"/>
     
-      <category term="dp" scheme="http://www.zjdx1998.ml/tags/dp/"/>
-    
       <category term="平衡树" scheme="http://www.zjdx1998.ml/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/"/>
     
       <category term="贪心" scheme="http://www.zjdx1998.ml/tags/%E8%B4%AA%E5%BF%83/"/>
     
       <category term="二分" scheme="http://www.zjdx1998.ml/tags/%E4%BA%8C%E5%88%86/"/>
+    
+      <category term="dp" scheme="http://www.zjdx1998.ml/tags/dp/"/>
     
       <category term="LCA" scheme="http://www.zjdx1998.ml/tags/LCA/"/>
     
@@ -54,53 +54,11 @@
   </entry>
   
   <entry>
-    <title>2018暑期ACM训练记录</title>
-    <link href="http://www.zjdx1998.ml/2018/07/15/acmtraingningjuly/"/>
-    <id>http://www.zjdx1998.ml/2018/07/15/acmtraingningjuly/</id>
-    <published>2018-07-14T16:10:58.000Z</published>
-    <updated>2018-08-08T02:03:33.388Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>坑太多，争取暑假前补完😭</p><h1 id="往年真题"><a href="#往年真题" class="headerlink" title=" 往年真题 "></a><center> 往年真题 </center></h1><h2 id="ACM-ICPC-2016-大连"><a href="#ACM-ICPC-2016-大连" class="headerlink" title="ACM-ICPC 2016 大连"></a>ACM-ICPC 2016 大连</h2><h3 id="A-Wrestling-Match"><a href="#A-Wrestling-Match" class="headerlink" title="A - Wrestling Match"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5971" target="_blank" rel="noopener">A - Wrestling Match</a></h3><ul><li>题意:给出n个人,m个敌对关系,x个好人,y个坏人,问能否 <strong>确定地</strong> 将所有人划为好人/坏人。</li><li>其中 $n\leq 1000 , m\leq 100000$</li><li>常规做法:直接DFS/BFS,对同一阵营的染色.</li><li>我的做法: 这题和种类并查集太像了,后来思考了一下的确可以用并查集做。具体做法类似NOIp原题关押罪犯,唯一的难点在于最后检测，我原本是检测剩下的独立集个数&lt;=2，但显然不符合5 0 3 0, 2 0 0 0这种数据。实际上我在做的时候用了enemy数组记录每个集合的敌人集合,所以只需在最后检测每个集合是否有自己的敌对集合,如果没有则是无法判定的集合。当然,矛盾的处理在之前就已经完成。  </li><li>代码: <a href="/2018/07/15/acmtraingningjuly/16dalian_A.cpp" title="A Wrestling Match">A Wrestling Match</a></li></ul><h3 id="B-Regular-Number"><a href="#B-Regular-Number" class="headerlink" title="B - Regular Number"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5972" target="_blank" rel="noopener">B - Regular Number</a></h3><h3 id="C-Game-of-Taking-Stones"><a href="#C-Game-of-Taking-Stones" class="headerlink" title="C - Game of Taking Stones"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5973" target="_blank" rel="noopener">C - Game of Taking Stones</a></h3><h3 id="D-A-Simple-Math-Problem"><a href="#D-A-Simple-Math-Problem" class="headerlink" title="D - A Simple Math Problem"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5974" target="_blank" rel="noopener">D - A Simple Math Problem</a></h3><h3 id="E-Aninteresting-game"><a href="#E-Aninteresting-game" class="headerlink" title="E - Aninteresting game"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5975" target="_blank" rel="noopener">E - Aninteresting game</a></h3><h3 id="F-Detachment"><a href="#F-Detachment" class="headerlink" title="F - Detachment"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5976" target="_blank" rel="noopener">F - Detachment</a></h3><h3 id="G-Garden-of-Eden"><a href="#G-Garden-of-Eden" class="headerlink" title="G - Garden of Eden"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5977" target="_blank" rel="noopener">G - Garden of Eden</a></h3><p>可以先看一下<a href="http://poj.org/problem?id=1741" target="_blank" rel="noopener">POJ1741</a></p><p>参考了众多大神的写法的代码：<a href="/2018/07/15/acmtraingningjuly/poj1741.cpp" title="POJ1741.cpp">POJ1741.cpp</a></p><p>这题可以采用1741的框架，把deep改为点到root的路径的或，最后计算的时候，算每一个状态和哪些状态或完可以得到$2^k-1$即可。</p><p>代码：<a href="/2018/07/15/acmtraingningjuly/16dalian_G.cpp" title="G - Garden of Eden">G - Garden of Eden</a></p><h3 id="H-To-begin-or-not-to-begin"><a href="#H-To-begin-or-not-to-begin" class="headerlink" title="H - To begin or not to begin"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5978" target="_blank" rel="noopener">H - To begin or not to begin</a></h3><h3 id="I-Convex"><a href="#I-Convex" class="headerlink" title="I - Convex"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5979" target="_blank" rel="noopener">I - Convex</a></h3><h3 id="J-Find-Small-A"><a href="#J-Find-Small-A" class="headerlink" title="J - Find Small A"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5980" target="_blank" rel="noopener">J - Find Small A</a></h3><ul><li>H、I、J都是大水题, J题略微比较有意思,int占4字节,char占1字节,将int转为char正好对应的是4个char。</li><li>代码如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define rep(i,n) for(int i=1;i&lt;=n;i++)</span><br><span class="line">int n;</span><br><span class="line">int main()&#123;</span><br><span class="line">    while(~scanf(&quot;%d&quot;,&amp;n))&#123;</span><br><span class="line">        int v,ans=0;</span><br><span class="line">        rep(i,n)&#123;</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;v);</span><br><span class="line">            char *x = (char *)&amp; v;</span><br><span class="line">            ans+=( (x[0]==&apos;a&apos;)+(x[1]==&apos;a&apos;)+(x[2]==&apos;a&apos;)+(x[3]==&apos;a&apos;) );</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h3 id="K-Guess-the-number"><a href="#K-Guess-the-number" class="headerlink" title="K - Guess the number"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5981" target="_blank" rel="noopener">K - Guess the number</a></h3><h2 id="ACM-ICPC-2016-北京"><a href="#ACM-ICPC-2016-北京" class="headerlink" title="ACM-ICPC 2016 北京"></a>ACM-ICPC 2016 北京</h2><h1 id="多校训练"><a href="#多校训练" class="headerlink" title="多校训练"></a><center>多校训练</center></h1><h2 id="牛客网暑期ACM多校训练"><a href="#牛客网暑期ACM多校训练" class="headerlink" title="牛客网暑期ACM多校训练"></a>牛客网暑期ACM多校训练</h2><h3 id="第一场"><a href="#第一场" class="headerlink" title="第一场"></a>第一场</h3><h2 id="ACM暑期多校联合训练"><a href="#ACM暑期多校联合训练" class="headerlink" title="ACM暑期多校联合训练"></a>ACM暑期多校联合训练</h2><h3 id="第一场-1"><a href="#第一场-1" class="headerlink" title="第一场"></a>第一场</h3><p>rank : 51/800+</p><table><thead><tr><th style="text-align:center">A</th><th style="text-align:center">B</th><th style="text-align:center">C</th><th style="text-align:center">D</th><th style="text-align:center">E</th><th style="text-align:center">F</th><th style="text-align:center">G</th><th style="text-align:center">H</th><th style="text-align:center">I</th><th style="text-align:center">J</th><th style="text-align:center">K</th></tr></thead><tbody><tr><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">⚪</td></tr></tbody></table><h3 id="第二场"><a href="#第二场" class="headerlink" title="第二场"></a>第二场</h3><p>rank : 73/800+</p><table><thead><tr><th style="text-align:center">A</th><th style="text-align:center">B</th><th style="text-align:center">C</th><th style="text-align:center">D</th><th style="text-align:center">E</th><th style="text-align:center">F</th><th style="text-align:center">G</th><th style="text-align:center">H</th><th style="text-align:center">I</th></tr></thead><tbody><tr><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center">⚪</td></tr></tbody></table><h3 id="第三场"><a href="#第三场" class="headerlink" title="第三场"></a>第三场</h3><p>rank : 112/800+</p><table><thead><tr><th style="text-align:center">A</th><th style="text-align:center">B</th><th style="text-align:center">C</th><th style="text-align:center">D</th><th style="text-align:center">E</th><th style="text-align:center">F</th><th style="text-align:center">G</th><th style="text-align:center">H</th><th style="text-align:center">I</th><th style="text-align:center">J</th><th style="text-align:center">K</th><th style="text-align:center">L</th><th style="text-align:center">M</th></tr></thead><tbody><tr><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">⚪</td></tr></tbody></table><h3 id="第四场"><a href="#第四场" class="headerlink" title="第四场"></a>第四场</h3><p>rank : 45/800+</p><table><thead><tr><th style="text-align:center">A</th><th style="text-align:center">B</th><th style="text-align:center">C</th><th style="text-align:center">D</th><th style="text-align:center">E</th><th style="text-align:center">F</th><th style="text-align:center">G</th><th style="text-align:center">H</th><th style="text-align:center">I</th><th style="text-align:center">J</th><th style="text-align:center">K</th><th style="text-align:center">L</th></tr></thead><tbody><tr><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td></tr></tbody></table><h3 id="第五场"><a href="#第五场" class="headerlink" title="第五场"></a>第五场</h3><p>rank : 25/800+</p><table><thead><tr><th style="text-align:center">A</th><th style="text-align:center">B</th><th style="text-align:center">C</th><th style="text-align:center">D</th><th style="text-align:center">E</th><th style="text-align:center">F</th><th style="text-align:center">G</th><th style="text-align:center">H</th><th style="text-align:center">I</th><th style="text-align:center">J</th><th style="text-align:center">K</th><th style="text-align:center">L</th></tr></thead><tbody><tr><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center">⚪</td><td style="text-align:center">⚪</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr></tbody></table><h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><h2 id="Wannafly"><a href="#Wannafly" class="headerlink" title="Wannafly"></a>Wannafly</h2><a href="/2018/07/15/acmtraingningjuly/combinatorics.pdf" title="组合数学">组合数学</a> $\quad$<br><a href="/2018/07/15/acmtraingningjuly/nsfunction.pdf" title="数论函数">数论函数</a> $\quad$<br><a href="/2018/07/15/acmtraingningjuly/geometry.pdf" title="计算几何">计算几何</a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;坑太多，争取暑假前补完😭&lt;/p&gt;
-&lt;h1 id=&quot;往年真题&quot;&gt;&lt;a hre
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://www.zjdx1998.ml/categories/ACM/"/>
-    
-    
-      <category term="ACM" scheme="http://www.zjdx1998.ml/tags/ACM/"/>
-    
-      <category term="数学" scheme="http://www.zjdx1998.ml/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="dp" scheme="http://www.zjdx1998.ml/tags/dp/"/>
-    
-      <category term="贪心" scheme="http://www.zjdx1998.ml/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-      <category term="二分" scheme="http://www.zjdx1998.ml/tags/%E4%BA%8C%E5%88%86/"/>
-    
-      <category term="模拟" scheme="http://www.zjdx1998.ml/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-      <category term="树状数组" scheme="http://www.zjdx1998.ml/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="Hash" scheme="http://www.zjdx1998.ml/tags/Hash/"/>
-    
-      <category term="字符串" scheme="http://www.zjdx1998.ml/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
     <title>高等数学A(下)期末复习</title>
     <link href="http://www.zjdx1998.ml/2018/06/20/advancedmathsfinalreview/"/>
     <id>http://www.zjdx1998.ml/2018/06/20/advancedmathsfinalreview/</id>
     <published>2018-06-20T06:33:06.000Z</published>
-    <updated>2018-06-21T15:15:34.637Z</updated>
+    <updated>2018-08-08T15:11:30.593Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="高数试题考点简要分析"><a href="#高数试题考点简要分析" class="headerlink" title="高数试题考点简要分析"></a>高数试题考点简要分析</h1><h2 id="多元函数微分学"><a href="#多元函数微分学" class="headerlink" title="多元函数微分学"></a>多元函数微分学</h2><ul><li>全微分 $dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy$<ul><li>例题：12-13-3 二(1)</li><li>填空题考法:给出全微分求参数<ul><li>例题：12-13-3 一(6)</li></ul></li></ul></li><li>复合函数求微分</li><li>隐函数求微分<ul><li>例题：P31 例4.9(三种方法)</li><li>方程组确定隐函数: P33 例4.10</li></ul></li><li>空间曲线的切线与法平面<ul><li>切向量:$\alpha = \lbrace x’(t_0),y’(t_0),z’(t_0)\rbrace$</li><li>切线:$\frac{x-x_0}{x’(t_0)}=\frac{y-y_0}{y’(t_0)}=\frac{z-z_0}{z’(t_0)}$</li><li>法平面:$x’(t_0)(x-x_0)+y’(t_0)(y-y_0)+z’(t_0)(z-z_0)=0$</li><li>例题：P43 例6.3</li></ul></li><li><p>空间曲面的切平面与法线</p><ul><li>法向量:$n=\lbrace F_x(x_0,y_0,z_0),F_y(x_0,y_0,z_0),F_z(x_0,y_0,z_0) \rbrace$</li><li>切平面: $\textbf{n}\cdot(x-x_0,y-y_0,z-z_0)=0$</li><li>法线: $\frac{x-x_0}{F_x(x_0,y_0,z_0)}=\frac{y-y_0}{F_y(x_0,y_0,z_0)}=\frac{z-z_0}{F_z(x_0,y_0,z_0)}$</li></ul></li><li><p>梯度$\textbf{grad}f(x_0,y_0)=\nabla f(x_0,y_0)=\lbrace f_x(x_0,y_0),f_y(x_0,y_0)\rbrace$</p></li><li>方向导数 $\frac{\partial z}{\partial l}|_{M_0}=f_x(x_0,y_0)cos\alpha + f_y(x_0,y_0)cos\beta = \nabla f(x_0,y_0)\cdot l_0$<ul><li>例题：课本P39 例5.2</li></ul></li></ul><h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><ul><li><strong>第一型曲面积分</strong>(今年很有可能考，一代二换三投影)</li><li><strong>二重三重积分</strong>(8分)</li><li><strong>第二型曲线积分 (12分)</strong><ul><li>常规算法</li><li>Green公式算法</li></ul></li><li><strong>第二型曲面积分(8分)</strong><ul><li>一代：将曲面$\sum$的方程代入被积函数</li><li>二投：将曲面$\sum$投影到坐标平面</li><li>三定号：由曲面侧确定正负号</li><li>四换域：改变积分域，曲面$\sum$变为投影域</li><li>例题<ul><li>P140 例2.3</li></ul></li></ul></li><li><strong>Green公式</strong>: $\oint_{\partial D^+} Pdx+Qdy = \iint_D(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})dxdy$</li><li>高斯公式<ul><li>格林公式：平面区域二重积分与区域边界第二型曲线</li><li>高斯公式：空间区域三重积分与边界曲面第二型曲面</li><li>注意点<ul><li>如果$\sum$不是闭曲面，则需要补充曲面使之封闭，最后不要忘了减去</li><li>如果$P,Q,R$在某点没有定义，则可以将$\sum$方程带入被积函数消去影响</li></ul></li></ul></li><li><strong>散度 (4分)</strong> $divF(M) = \frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}$ </li><li><strong>Stokes公式</strong> : 第二型曲线与第二型曲面变换</li><li><strong>旋度 (和散度连起来4分)</strong> P169页</li></ul><h2 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h2><ul><li><strong>常见级数</strong><ul><li>等比级数 $\sum_{n=0}^{\infty}aq^n$又称为几何级数<ul><li>$|q|&lt;1$时 收敛, $S=\frac{a}{1-q}$</li><li>$|q|\geq 1$时 发散.</li></ul></li><li>$p$级数 $\sum_{n=1}^{\infty} \frac{1}{n^p}$<ul><li>$p\leq 1$时 发散</li><li>$p&gt;1$时 收敛</li><li>$p=1$时,$\sum_{n=1}^{\infty} \frac{1}{n}$称为调和级数</li></ul></li><li>幂级数 $\sum_{n=0}^{\infty}c_nz^n=c_0+c_1z+\cdots+c_nz^n+\cdots$<ul><li><strong>收敛性(必考) 三种情况见P230 （12分左右,含缺项幂级数）</strong><ul><li>收敛半径$$<br>R=\begin{cases}<br>\frac{1}{\rho} &amp; 0&lt;\rho&lt;\infty<br>\newline<br>\infty &amp; \rho = 0<br>\newline<br>0 &amp; \rho = \infty<br>\end{cases}<br>$$</li><li>当幂级数为实幂级数时, <strong>收敛圆</strong>变为区间$(-R,R)$,称为 <strong>收敛区间</strong>.</li></ul></li><li><strong>求和函数并求数项级数和(8分)</strong><ul><li>建议p233-235熟练掌握</li><li>注意求导完积分时,从0开始积，取值定C</li></ul></li><li><strong>函数展开为幂级数(8-10分)</strong><ul><li>牢记P239</li><li>幂级数展开不允许有负次幂</li></ul></li></ul></li><li><strong>Laurent级数 (8分)</strong> P248 例3.2  P249 习题2</li><li><strong>Fourier级数 (4分)</strong></li><li>缺项幂级数 : 只含奇次幂或偶次幂的幂级数，直接采用比值判别法</li></ul></li><li>条件收敛、绝对收敛<ul><li>$\sum_{n=1}^{\infty}|u_n|$收敛则称级数$\sum_{n=1}^{\infty}u_n$绝对收敛(按模)</li><li>$\sum_{n=1}^{\infty}|u_n|$发散,而级数$\sum_{n=1}^{\infty}u_n$收敛,则称其条件收敛。</li></ul></li><li>反常积分判敛法<ul><li>可参考P214-P216的推论，虽然没考过但包老师毒奶有可能考，还是看一下吧</li><li>建议掌握$\Gamma$函数：</li><li>$$\Gamma(x)=<br>\begin{cases}<br>\int_{0}^{+\infty}e^{-t}t^{x-1}dt &amp; x&gt;0,<br>\newline<br>\frac{\Gamma(x+1)}{x} &amp; x&lt;0,x\neq -1,-2,\cdots<br>\end{cases}<br>\Gamma(\frac{1}{2})=\sqrt{\pi} , \quad<br>\Gamma(1)=1<br>$$ </li></ul></li><li><p>孤立奇点与留数</p><ul><li><p>孤立奇点</p><ul><li>可去奇点：Laurent展开中无负幂次</li><li>m级极点：Laurent展开式中有有限项负幂次<ul><li>$f(z)$在$z_0$处解析,那么$z_0$为$f(z)$的m级零点充要条件是：$f^{(n)}(z_0)=0 (n=0,1,2,\cdots,m-1),f^{(m)}(z_0)\neq 0$</li><li>$z_0$为$f(z)$的$m$级极点$\Leftrightarrow z_0$为$\frac{1}{f(z)}$的m级零点。</li></ul></li><li>本性奇点：有无穷多负幂项</li><li>求$f(z)$奇点和类型方法：</li><li><blockquote><p>首先求出所有奇点<br>接着求$\lim_{z\to z_0}f(z)$,若该值为复常数则为可去奇点<br>若该值不存在且不为无穷，则为本性奇点<br>若该值为无穷，则：<br>对于每个奇点,验证$\frac{1}{f^{(m)}(z)}\neq 0$<br>每一个奇点求出的m即为该奇点的m级极点。<br>对于无穷型点性态，考虑$z=\frac{1}{t}$带入后同上。</p></blockquote></li></ul></li><li><p>留数</p><ul><li>如果$z_0$为$f(z)$的m级极点，那么$Res[f(z),z_0]=\frac{1}{(m-1)!}\lim_{z\to z_0}[(z-z_0)^mf(z)]^{(m-1)}$</li><li>千万不要忘了定义法:将$f(z)$在$z_0$的去心邻域内的Laurent展开式的负一次幂系数$c_{-1}$</li><li>若$f(z)=\frac{P(z)}{Q(z)},P(z),Q(z)均在z_0解析,且P(z_0)\neq 0,Q(z_0)=0,Q’(z_0)\neq 0$,则$Res[\frac{P(z)}{Q(z)},z_0]=\frac{P(z_0)}{Q’(z_0)}$</li><li>留数定理：$\oint_L f(z)dz = 2\pi i \sum_{k=1}{n}Res[f(z),z_k]$</li></ul></li></ul></li></ul><h1 id="资料合集"><a href="#资料合集" class="headerlink" title="资料合集"></a>资料合集</h1><p>$\quad$<br><a href="/2018/06/20/advancedmathsfinalreview/zsdltqdl.pdf" title="高等数学全册概念(张曙整理)">高等数学全册概念(张曙整理)</a><br><a href="/2018/06/20/advancedmathsfinalreview/ryhdltql.pdf" title="高等数学重要例题(冉雨杭整理)">高等数学重要例题(冉雨杭整理)</a><br>$\quad$<br><a href="/2018/06/20/advancedmathsfinalreview/A2finalpro.pdf" title="11-16高数上期末题目">11-16高数上期末题目</a><br><a href="/2018/06/20/advancedmathsfinalreview/A2finalans.pdf" title="11-16高数上期末答案">11-16高数上期末答案</a><br>$\quad$<br><a href="/2018/06/20/advancedmathsfinalreview/A3finalpro.pdf" title="12-17高数下期末题目">12-17高数下期末题目</a><br><a href="/2018/06/20/advancedmathsfinalreview/A3finalans.pdf" title="12-17高数下期末答案">12-17高数下期末答案</a><br>$\quad$<br><a href="/2018/06/20/advancedmathsfinalreview/A3midpro.pdf" title="12-17高数下期中题目">12-17高数下期中题目</a><br><a href="/2018/06/20/advancedmathsfinalreview/A3midans.pdf" title="12-17高数下期中答案">12-17高数下期中答案</a><br>$\quad$<br><a href="/2018/06/20/advancedmathsfinalreview/Abookans.pdf" title="高等数学全册答案">高等数学全册答案</a></p>]]></content>
     
@@ -112,6 +70,8 @@
       
     
     </summary>
+    
+      <category term="期末复习" scheme="http://www.zjdx1998.ml/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
     
     
       <category term="期末复习" scheme="http://www.zjdx1998.ml/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
@@ -173,81 +133,6 @@
       <category term="期末复习" scheme="http://www.zjdx1998.ml/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
     
       <category term="C++" scheme="http://www.zjdx1998.ml/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018ACM-ICPC江苏邀请赛（徐州）参赛总结</title>
-    <link href="http://www.zjdx1998.ml/2018/06/03/18-6-icpcjsxz/"/>
-    <id>http://www.zjdx1998.ml/2018/06/03/18-6-icpcjsxz/</id>
-    <published>2018-06-03T15:10:19.000Z</published>
-    <updated>2018-06-03T16:22:50.460Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="校园环境"><a href="#校园环境" class="headerlink" title="校园环境"></a>校园环境</h1><h2 id="图书馆"><a href="#图书馆" class="headerlink" title="图书馆"></a>图书馆</h2><img src="/2018/06/03/18-6-icpcjsxz/pic1.jpg" title="Library"><img src="/2018/06/03/18-6-icpcjsxz/pic2.jpg" title="Library"><img src="/2018/06/03/18-6-icpcjsxz/pic3.jpg" title="Building"><h2 id="比赛体育馆外景"><a href="#比赛体育馆外景" class="headerlink" title="比赛体育馆外景:"></a>比赛体育馆外景:</h2><img src="/2018/06/03/18-6-icpcjsxz/pic4.jpg" title="体育馆"><h2 id="比赛体育馆内景"><a href="#比赛体育馆内景" class="headerlink" title="比赛体育馆内景:"></a>比赛体育馆内景:</h2><img src="/2018/06/03/18-6-icpcjsxz/pic5.jpg" title="体育馆"><h1 id="赛题"><a href="#赛题" class="headerlink" title="赛题"></a>赛题</h1><h2 id="A题"><a href="#A题" class="headerlink" title="A题"></a>A题</h2><img src="/2018/06/03/18-6-icpcjsxz/A.jpg" title="A"><h2 id="B题"><a href="#B题" class="headerlink" title="B题"></a>B题</h2><img src="/2018/06/03/18-6-icpcjsxz/B.jpg" title="B"><h2 id="C题"><a href="#C题" class="headerlink" title="C题"></a>C题</h2><img src="/2018/06/03/18-6-icpcjsxz/C.jpg" title="C"><h2 id="D题"><a href="#D题" class="headerlink" title="D题"></a>D题</h2><img src="/2018/06/03/18-6-icpcjsxz/D.jpg" title="D"><h2 id="E题"><a href="#E题" class="headerlink" title="E题"></a>E题</h2><img src="/2018/06/03/18-6-icpcjsxz/E.jpg" title="E"><h2 id="F题"><a href="#F题" class="headerlink" title="F题"></a>F题</h2><img src="/2018/06/03/18-6-icpcjsxz/F.jpg" title="F"><h2 id="G题"><a href="#G题" class="headerlink" title="G题"></a>G题</h2><img src="/2018/06/03/18-6-icpcjsxz/G.jpg" title="G"><h2 id="H题"><a href="#H题" class="headerlink" title="H题"></a>H题</h2><img src="/2018/06/03/18-6-icpcjsxz/H.jpg" title="H"><h2 id="I题"><a href="#I题" class="headerlink" title="I题"></a>I题</h2><img src="/2018/06/03/18-6-icpcjsxz/I.jpg" title="I"><h2 id="J题"><a href="#J题" class="headerlink" title="J题"></a>J题</h2><img src="/2018/06/03/18-6-icpcjsxz/J.jpg" title="J"><h2 id="K题"><a href="#K题" class="headerlink" title="K题"></a>K题</h2><img src="/2018/06/03/18-6-icpcjsxz/K.jpg" title="K"><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><a href="/2018/06/03/18-6-icpcjsxz/solution.pdf" title="zkc题解">zkc题解</a><a href="/2018/06/03/18-6-icpcjsxz/code.zip" title="标程汇总">标程汇总</a><h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><h2 id="金牌队"><a href="#金牌队" class="headerlink" title="金牌队"></a>金牌队</h2><img src="/2018/06/03/18-6-icpcjsxz/gold.jpg" title="金牌队"><h2 id="lcl是SEU的红太阳"><a href="#lcl是SEU的红太阳" class="headerlink" title="lcl是SEU的红太阳"></a>lcl是SEU的红太阳</h2><img src="/2018/06/03/18-6-icpcjsxz/silver.jpg" title="lcl是SEU的红太阳"><h2 id="lcl领奖图"><a href="#lcl领奖图" class="headerlink" title="lcl领奖图"></a>lcl领奖图</h2><img src="/2018/06/03/18-6-icpcjsxz/lcl.jpg" title="lcl领奖图"><h2 id="奖牌"><a href="#奖牌" class="headerlink" title="奖牌"></a>奖牌</h2><img src="/2018/06/03/18-6-icpcjsxz/medal.jpg" title="难过的CU"><h2 id="最终榜单"><a href="#最终榜单" class="headerlink" title="最终榜单"></a><a href="http://ctec.cumt.edu.cn/acmboard2018" target="_blank" rel="noopener">最终榜单</a></h2><h2 id="比赛官网"><a href="#比赛官网" class="headerlink" title="比赛官网"></a><a href="http://acm.cumt.edu.cn" target="_blank" rel="noopener">比赛官网</a></h2><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>四支队伍，一银一铜两铁，我们队卡了两题，如果后来我能及时意识到矩阵快速幂可能还能及时A掉I题，不会这么惨。</p><h2 id="乱入的自拍"><a href="#乱入的自拍" class="headerlink" title="乱入的自拍"></a>乱入的自拍</h2><img src="/2018/06/03/18-6-icpcjsxz/zp1.jpg" title="自拍"><img src="/2018/06/03/18-6-icpcjsxz/zp2.jpg" title="自拍"><img src="/2018/06/03/18-6-icpcjsxz/zp3.jpg" title="自拍">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;校园环境&quot;&gt;&lt;a href=&quot;#校园环境&quot; class=&quot;head
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://www.zjdx1998.ml/categories/ACM/"/>
-    
-    
-      <category term="ACM" scheme="http://www.zjdx1998.ml/tags/ACM/"/>
-    
-      <category term="数学" scheme="http://www.zjdx1998.ml/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="矩阵快速幂" scheme="http://www.zjdx1998.ml/tags/%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
-    
-      <category term="可持久化线段树" scheme="http://www.zjdx1998.ml/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
-    
-      <category term="dp" scheme="http://www.zjdx1998.ml/tags/dp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5月下旬ACM训练记录</title>
-    <link href="http://www.zjdx1998.ml/2018/05/17/ACM-Training/"/>
-    <id>http://www.zjdx1998.ml/2018/05/17/ACM-Training/</id>
-    <published>2018-05-17T03:23:06.000Z</published>
-    <updated>2018-06-03T15:28:23.880Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>题解在题目名链接的代码中查看</p><h1 id="Codeforces"><a href="#Codeforces" class="headerlink" title="Codeforces"></a>Codeforces</h1><table><thead><tr><th>序号</th><th>题目名</th><th>所属比赛</th><th>算法</th><th>做出/补题</th><th>做题时间</th></tr></thead><tbody><tr><td><center> 1 </center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44A.cpp" title="A.Chess Placing">A.Chess Placing</a></center></td><td><center>ECF Round 44</center></td><td><center>模拟</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>2</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44B.cpp" title="B.Switches and Lamps">B.Switches and Lamps</a>   </center></td><td><center> ECF Round 44</center></td><td><center>模拟</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>3</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44C.cpp" title="C.Liebig's Barrels">C.Liebig's Barrels</a>   </center></td><td><center> ECF Round 44</center></td><td><center>贪心</center></td><td><center> √ </center></td><td><center>2018/5/21 </center></td></tr><tr><td><center>4</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44D.cpp" title="D.Sand Fortress">D.Sand Fortress</a>   </center></td><td><center> ECF Round 44</center></td><td><center>二分</center></td><td><center> × √</center></td><td><center>2018/5/23 </center></td></tr><tr><td><center>5</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44E.cpp" title="E.Pencils and Boxes">E.Pencils and Boxes</a>   </center></td><td><center> ECF Round 44</center></td><td><center>dp+树状数组</center></td><td><center> × √</center></td><td><center>2018/5/24 </center></td></tr><tr><td><center>6</center></td><td><center> <a href="/2018/05/17/ACM-Training/ecfr44F.cpp" title="F.Isomorphic Strings">F.Isomorphic Strings</a>   </center></td><td><center> ECF Round 44</center></td><td><center>字符串Hash</center></td><td><center> × √</center></td><td><center>2018/5/24 </center></td></tr><tr><td><center>7</center></td><td><center>    </center></td><td><center> ECF Round 44</center></td><td><center></center></td><td><center> × </center></td><td><center>2018/5/21 </center></td></tr></tbody></table><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>字符串Hash题目<a href="https://blog.csdn.net/chaiwenjun000/article/details/71079819" target="_blank" rel="noopener">汇总</a></p><h2 id="HDU"><a href="#HDU" class="headerlink" title="HDU"></a>HDU</h2><p>关于BKDRHash的介绍较为详细的文章可以点击<a href="https://blog.csdn.net/wanglx_/article/details/40400693" target="_blank" rel="noopener">文章1</a> 以及<a href="https://www.cnblogs.com/ldy-miss/p/6099454.html" target="_blank" rel="noopener">文章2</a></p><p>一个小tip是, bkdrhash最好<strong><em>return (h &amp; 0x7FFFFFFF)</em></strong>，如果模散列表，当长度小的时候容易造成冲突，可以采用开放地址或者拉链法解决。但是如果直接自然溢出，冲突数较小，这种方法似乎和map更搭。</p><table><thead><tr><th>序号</th><th>题目名</th><th>所属比赛</th><th>算法</th><th>做出/补题</th><th>做题时间</th></tr></thead><tbody><tr><td><center> 1 </center></td><td><center> <a href="/2018/05/17/ACM-Training/hdu1880.cpp" title="1880.魔咒词典">1880.魔咒词典</a></center></td><td><center>类题训练</center></td><td><center>字符串BKDRHash</center></td><td><center> √ </center></td><td><center>2018/5/25 </center></td></tr><tr><td><center> 2 </center></td><td><center> <a href="/2018/05/17/ACM-Training/hdu6287.cpp" title="6287.口算训练">6287.口算训练</a></center></td><td><center>CCPC2018女生赛</center></td><td><center>数学</center></td><td><center> √ </center></td><td><center>2018/5/29 </center></td></tr></tbody></table><p><a href="http://www.360doc.com/content/14/0721/09/16319846_395862328.shtml" target="_blank" rel="noopener">Hash冲突处理</a></p><p><a href="https://blog.csdn.net/u013806583/article/details/52643541?locationNum=2&amp;fps=1" target="_blank" rel="noopener">ASL计算方法</a></p><h2 id="POJ"><a href="#POJ" class="headerlink" title="POJ"></a>POJ</h2><table><thead><tr><th>序号</th><th>题目名</th><th>所属比赛</th><th>算法</th><th>做出/补题</th><th>做题时间</th></tr></thead><tbody><tr><td><center> 1 </center></td><td><center> <a href="/2018/05/17/ACM-Training/poj3274.cpp" title="3274.Gold Balanced Lineup">3274.Gold Balanced Lineup</a></center></td><td><center>类题训练</center></td><td><center>拉链法Hash</center></td><td><center> √ </center></td><td><center>2018/5/29 </center></td></tr></tbody></table><h1 id="ACM-ICPC徐州邀请赛"><a href="#ACM-ICPC徐州邀请赛" class="headerlink" title="ACM-ICPC徐州邀请赛"></a>ACM-ICPC徐州邀请赛</h1><p>详情见:<br><a href="/2018/06/03/18-6-icpcjsxz/" title="徐州邀请赛总结">徐州邀请赛总结</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;题解在题目名链接的代码中查看&lt;/p&gt;
-&lt;h1 id=&quot;Codeforces&quot;
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://www.zjdx1998.ml/categories/ACM/"/>
-    
-    
-      <category term="ACM" scheme="http://www.zjdx1998.ml/tags/ACM/"/>
-    
-      <category term="数学" scheme="http://www.zjdx1998.ml/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="dp" scheme="http://www.zjdx1998.ml/tags/dp/"/>
-    
-      <category term="贪心" scheme="http://www.zjdx1998.ml/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-      <category term="二分" scheme="http://www.zjdx1998.ml/tags/%E4%BA%8C%E5%88%86/"/>
-    
-      <category term="模拟" scheme="http://www.zjdx1998.ml/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-      <category term="树状数组" scheme="http://www.zjdx1998.ml/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="Hash" scheme="http://www.zjdx1998.ml/tags/Hash/"/>
-    
-      <category term="字符串" scheme="http://www.zjdx1998.ml/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   

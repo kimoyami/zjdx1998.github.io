@@ -3,42 +3,28 @@
 
 
     
+    
   <url>
-    <loc>http://www.zjdx1998.ml/2018/07/15/acmtraingningjuly/</loc>
-    <lastmod>2018-08-08T02:03:33.388Z</lastmod>
+    <loc>http://www.zjdx1998.ml/2018/06/20/advancedmathsfinalreview/</loc>
+    <lastmod>2018-08-08T15:11:30.593Z</lastmod>
     <data>
         <display>
-        <title>2018暑期ACM训练记录</title>
-        <pubTime>2018-07-14T16:10:58.000Z</pubTime>
+        <title>高等数学A(下)期末复习</title>
+        <pubTime>2018-06-20T06:33:06.000Z</pubTime>
         
-        <tag>ACM</tag>
+        <tag>期末复习</tag>
          
-        <tag>数学</tag>
-         
-        <tag>dp</tag>
-         
-        <tag>贪心</tag>
-         
-        <tag>二分</tag>
-         
-        <tag>模拟</tag>
-         
-        <tag>树状数组</tag>
-         
-        <tag>Hash</tag>
-         
-        <tag>字符串</tag>
+        <tag>高等数学</tag>
          
          
            
              
-              <breadCrumb title="ACM" url="http://www.zjdx1998.ml/categories/ACM/"/>
+              <breadCrumb title="期末复习" url="http://www.zjdx1998.ml/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
           
         </display>
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://www.zjdx1998.ml/2018/08/02/2018SummerHZOI/</loc>
@@ -50,13 +36,13 @@
         
         <tag>ACM</tag>
          
-        <tag>dp</tag>
-         
         <tag>平衡树</tag>
          
         <tag>贪心</tag>
          
         <tag>二分</tag>
+         
+        <tag>dp</tag>
          
         <tag>LCA</tag>
          
@@ -95,25 +81,6 @@
 
     
   <url>
-    <loc>http://www.zjdx1998.ml/2018/06/20/advancedmathsfinalreview/</loc>
-    <lastmod>2018-06-21T15:15:34.637Z</lastmod>
-    <data>
-        <display>
-        <title>高等数学A(下)期末复习</title>
-        <pubTime>2018-06-20T06:33:06.000Z</pubTime>
-        
-        <tag>期末复习</tag>
-         
-        <tag>高等数学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.zjdx1998.ml/2018/06/05/c-review/</loc>
     <lastmod>2018-06-18T13:53:54.337Z</lastmod>
     <data>
@@ -129,70 +96,6 @@
            
              
               <breadCrumb title="期末复习" url="http://www.zjdx1998.ml/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.zjdx1998.ml/2018/06/03/18-6-icpcjsxz/</loc>
-    <lastmod>2018-06-03T16:22:50.460Z</lastmod>
-    <data>
-        <display>
-        <title>2018ACM-ICPC江苏邀请赛（徐州）参赛总结</title>
-        <pubTime>2018-06-03T15:10:19.000Z</pubTime>
-        
-        <tag>ACM</tag>
-         
-        <tag>数学</tag>
-         
-        <tag>矩阵快速幂</tag>
-         
-        <tag>可持久化线段树</tag>
-         
-        <tag>dp</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://www.zjdx1998.ml/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.zjdx1998.ml/2018/05/17/ACM-Training/</loc>
-    <lastmod>2018-06-03T15:28:23.880Z</lastmod>
-    <data>
-        <display>
-        <title>5月下旬ACM训练记录</title>
-        <pubTime>2018-05-17T03:23:06.000Z</pubTime>
-        
-        <tag>ACM</tag>
-         
-        <tag>数学</tag>
-         
-        <tag>dp</tag>
-         
-        <tag>贪心</tag>
-         
-        <tag>二分</tag>
-         
-        <tag>模拟</tag>
-         
-        <tag>树状数组</tag>
-         
-        <tag>Hash</tag>
-         
-        <tag>字符串</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://www.zjdx1998.ml/categories/ACM/"/>
           
         </display>
     </data>
